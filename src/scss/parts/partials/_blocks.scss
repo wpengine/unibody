@@ -1,0 +1,191 @@
+.blocks {
+	@include flex();
+	justify-content: flex-start;
+}
+
+.block {
+	@extend %gray-1-box;
+	display: flex;
+	flex: 1 1 220px;
+	padding: 0;
+
+	.wrap {
+		@include flex( column, nowrap );
+		flex: 1 1 auto;
+		width: 100%;
+		padding: $gutter-small;
+		text-decoration: none;
+		color: $text-color;
+
+
+		&:hover, &:active {
+			text-decoration: none;
+		}
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a.wrap {
+		&:hover, &:focus, &:active {
+			color: $color-white;
+			background-color: $color-pelorous;
+
+			h2, h3, p, li, a, .entry-title {
+				color: $color-white;
+			}
+
+			svg {
+				fill: $color-white !important; // sass-lint:disable-line no-important
+			}
+		}
+	}
+
+	h3 {
+		@extend .section-subheading;
+		margin-top: 0;
+	}
+
+	p {
+		&:only-of-type {
+			flex: 1 1 auto;
+			min-height: 30px;
+		}
+	}
+
+	&:not(.no-corners) {
+		img {
+			@include corners();
+		}
+	}
+
+	.cta {
+		flex: 0 0 44px;
+		margin: 0;
+		color: $brand-primary;
+	}
+
+	&.background-gable {
+		h3 {
+			color: $brand-primary;
+		}
+
+		p {
+			color: $color-white;
+		}
+
+		.stat {
+			color: $color-saffron;
+		}
+	}
+
+	&.icon-left {
+		.wrap {
+			flex-wrap: wrap;
+		}
+
+		.icon-container {
+			flex: auto;
+		}
+	}
+
+	@media (min-width: $sm) {
+		&.icon-left {
+			.wrap {
+				max-height: 450px;
+
+				> * {
+					width: 50%;
+					padding-left: $gutter-small;
+				}
+			}
+
+			.icon-container {
+				flex-basis: auto;
+				margin: 0;
+				padding-left: 0;
+				padding-right: $gutter-small;
+			}
+
+			p {
+				flex: 0 0 auto;
+			}
+		}
+	}
+
+	@media (min-width: $md) {
+		padding: 0;
+
+		.wrap {
+			padding: $gutter;
+		}
+	}
+}
+
+.icon-container {
+	margin-bottom: $gutter-small;
+	height: 40px;
+
+	.icon-size-x-small & {
+		height: 40px;
+	}
+
+	.icon-size-small & {
+		height: 60px;
+	}
+
+	.icon-size-medium & {
+		height: 100px;
+	}
+
+	.icon-size-large & {
+		height: 120px;
+	}
+
+	.icon-size-x-large & {
+		height: 180px;
+	}
+
+	.icon-size-auto & {
+		height: auto;
+		flex: 0 0 auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	img, svg {
+		display: inline;
+		vertical-align: baseline;
+		height: 100%;
+	}
+}
+
+@media (min-width: $md) {
+	.block {
+		width: 32%;
+		flex: 0 1 32%;
+
+		@for $i from 1 through 3 {
+			.row-length-#{$i} & {
+				flex-basis: #{ 100% / $i - 1 };
+			}
+		}
+	}
+}
+
+@media (min-width: $lg) {
+	.block {
+		width: 24%;
+		flex-basis: 24%;
+
+		@for $i from 1 through 6 {
+			.row-length-#{$i} & {
+				flex-basis: #{ 100% / $i - 0.5 };
+			}
+		}
+	}
+}

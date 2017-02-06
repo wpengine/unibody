@@ -1,0 +1,43 @@
+// Define our custom variable values
+$grid-gutter-width: 40px;
+
+// Set border radius to zero
+$border-radius-base: 0;
+
+//** Tooltip customizations
+$tooltip-bg: #162A33;
+$tooltip-opacity: 1;
+$tooltip-max-width: 300px;
+$tooltip-arrow-width: 7px;
+
+// Set the base font size
+$font-size-base: 16px;
+
+
+// Core variables and mixins
+@import "bootstrap/bootstrap/variables";
+@import "bootstrap/bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/bootstrap/normalize";
+@import "bootstrap/bootstrap/print";
+
+// Core CSS
+@import "bootstrap/bootstrap/scaffolding";
+@import "bootstrap/bootstrap/type";
+@import "bootstrap/bootstrap/code";
+@import "bootstrap/bootstrap/grid";
+@import "bootstrap/bootstrap/tables";
+@import "bootstrap/bootstrap/forms";
+@import "bootstrap/bootstrap/buttons";
+@import "bootstrap/bootstrap/button-groups";
+@import "bootstrap/bootstrap/dropdowns";
+@import "bootstrap/bootstrap/tooltip";
+
+// Utility classes
+@import "bootstrap/bootstrap/utilities";
+@import "bootstrap/bootstrap/responsive-utilities";
+
+// Select styling
+@import "bootstrap/bootstrap-select/variables";
+@import "bootstrap/bootstrap-select/bootstrap-select";

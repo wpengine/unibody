@@ -1,0 +1,138 @@
+%button {
+	@include corners( false, false, true, false );
+
+	display: inline-block;
+	padding: 15px;
+	width: auto;
+	max-width: 100%;
+	color: $color-white;
+	background-color: $brand-primary;
+	font: bold 1em/1em $opensans;
+	text-transform: uppercase;
+	text-align: center;
+	box-shadow: none;
+	text-decoration: none;
+	border: 0;
+	cursor: pointer;
+
+	&:hover, &:focus, &:active, &.active {
+		color: $color-white;
+		background-color: $color-pelorous;
+	}
+
+	&.white, &.alt1 {
+		color: $color-gable;
+		background-color: $color-white;
+
+		&:hover, &:focus, &:active, &.active {
+			color: $color-white;
+			background-color: $color-gable;
+		}
+	}
+
+	&.gable, &.alt2 {
+		background-color: $color-gable;
+
+		&:hover, &:focus, &:active, &.active {
+			background-color: $color-pelorous;
+		}
+	}
+
+	.hero-block & {
+		&:hover, &:focus, &:active, &.active {
+			color: $brand-primary;
+			background-color: $color-white;
+		}
+	}
+
+	.block & {
+		background-color: $color-pelorous;
+
+		&:hover, &:focus, &:active, &.active {
+			background-color: $color-gable;
+		}
+	}
+
+	.block a.wrap:hover &, .block a.wrap:focus &, .block a.wrap:active &, .block.active a.wrap & {
+		background-color: $color-gable;
+	}
+}
+
+button,
+.button,
+a.button,
+.cta-button,
+a.cta-button,
+.widget .button {
+	@extend %button;
+
+	// If buttons are side by side, put a gap between them
+	& + & {
+		margin-top: $gutter-tiny;
+	}
+
+	@media (min-width: $sm) {
+		& + & {
+			margin-top: 0;
+			margin-left: $gutter-tiny;
+		}
+	}
+}
+
+.tip {
+	cursor: pointer;
+	color: $brand-primary;
+}
+
+.tooltip {
+	font-size: $font-size;
+
+	.tooltip-inner {
+		@include corners( false, true, false, false, 5px );
+		padding: 10px;
+		margin-bottom: -1px;
+	}
+
+	.tooltip-arrow {
+		z-index: #{$zindex-tooltip + 1};
+	}
+}
+
+%cta-link {
+	@extend %transition;
+	position: relative;
+	display: inline-block;
+	font: 600 1.2rem/1 $opensans;
+	color: $brand-primary;
+	padding: $gutter-tiny 0;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+
+		&:before {
+			visibility: hidden;
+			transform: scaleX(0);
+		}
+	}
+
+	&:before {
+		@extend %transition;
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background-color: $brand-primary;
+		text-decoration: none;
+		visibility: visible;
+		transform: scaleX(1);
+	}
+}
+
+.cta-link,
+a.cta-link,
+input[type="submit"].cta-link {
+	@extend %cta-link;
+}

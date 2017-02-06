@@ -1,0 +1,194 @@
+.plan-table {
+	@include flex();
+
+	.column {
+		@include flex(column, nowrap);
+		flex: 1 0 250px;
+		margin-bottom: $gutter-tiny;
+
+		.cell.plan {
+			&.head {
+				@include corners( true, true, false, false );
+				background: $color-pelorous;
+				color: $color-white;
+			}
+
+			&.foot {
+				@include corners( false, false, true, true );
+				background: $brand-primary;
+				color: $color-white;
+			}
+		}
+
+		&.thead {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		margin-bottom: $gutter-tiny;
+		line-height: 1.15;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	h2 {
+		font: 3.6rem/0.875 $din-bold;
+		color: $color-pelorous;
+		margin: 0;
+	}
+
+	.cell {
+		position: relative;
+		flex: 1 1 30px;
+		padding: $gutter-tiny $gutter-small;
+		margin: 1px;
+		background-color: $color-grayscale-1;
+
+		&.th {
+			flex-basis: 266px;
+		}
+
+		&.checked {
+			&:after {
+				@extend %fontawesome;
+				display: inline;
+				content: '\f00c';
+			}
+		}
+
+		&.unchecked {
+			&:after {
+				display: inline;
+				content: '\2014';
+			}
+		}
+
+		&.plan {
+			@include flex(column, nowrap);
+			padding: $gutter-small;
+
+			.title {
+				font: 1.6rem/1 $din-bold;
+				text-transform: uppercase;
+			}
+
+			.price {
+				flex: 0 1 100%;
+
+				a {
+					@extend %link-underline;
+					color: $color-white;
+				}
+			}
+		}
+
+		&.value {
+			text-align: right;
+
+			&:before {
+				display: inline;
+				float: left;
+				max-width: calc(100% - #{$gutter});
+				content: attr(data-label);
+				font-weight: bold;
+				margin-right: $gutter-tiny;
+				text-align: left;
+			}
+		}
+
+		&.head {
+			flex: 1 0 105px;
+		}
+
+		&.foot {
+			flex: 1 0 145px;
+		}
+
+		&.corner {
+			padding: $gutter-small 0;
+		}
+	}
+
+	.thead {
+		flex-basis: 100%;
+
+		.cell {
+			display: none;
+			padding-left: 0;
+
+			&.head {
+				display: block;
+			}
+
+			&.corner {
+				background-color: $color-transparent;
+			}
+
+			&.label {
+				// @include corners( true, false, false, true );
+				text-align: right;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.tip, .spacer {
+		position: relative;
+		display: inline-block;
+		width: 15px;
+	}
+
+	@media (min-width: 1100px) {
+		flex-wrap: nowrap;
+
+		.column {
+			flex-grow: 2;
+			flex-basis: 135px;
+			margin-bottom: 0;
+
+			&.thead {
+				flex-basis: 280px;
+
+				.cell {
+					display: block;
+				}
+			}
+
+			&:nth-child(even) {
+				.cell {
+					background: $color-grayscale-3;
+				}
+			}
+		}
+
+		.cell {
+
+			&.value {
+				text-align: left;
+
+				&:before {
+					display: none;
+				}
+			}
+
+			&.corner {
+				padding-left: $gutter;
+			}
+
+			&.foot {
+				flex-basis: 180px;
+			}
+		}
+	}
+
+	@media (min-width: $lg) {
+		.cell {
+			&.foot {
+				flex-basis: 155px;
+			}
+		}
+	}
+}

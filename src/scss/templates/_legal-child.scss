@@ -1,0 +1,14 @@
+body.page-template-template-legal-child {
+	.hero-block {
+		margin-bottom: $gutter;
+
+		.entry-title {
+			max-width: 700px;
+		}
+	}
+
+	.entry-content {
+		@extend .layout-container-padding-large;
+		max-width: #{560px + $gutter-large * 2 };
+	}
+}

@@ -1,0 +1,195 @@
+.entry-header {
+	@extend %clearfix;
+	font-weight: 600;
+	text-transform: uppercase;
+
+	.entry-title {
+		@extend %entry-title;
+		margin-bottom: 0;
+	}
+
+	.entry-meta {
+		a {
+			@extend %no-link-underline;
+			color: $text-color;
+		}
+	}
+
+	.share-btns {
+
+		li {
+			display: inline-block;
+			text-align: center;
+		}
+
+		a {
+			@extend %fontawesome;
+			display: block;
+			width: $gutter-small;
+			height: $gutter-small;
+			line-height: $gutter-small;
+			color: $color-white;
+			border-radius: 99em;
+
+			&:before {
+				display: inline-block;
+				font-size: 1.2rem;
+				line-height: $gutter-small;
+				vertical-align: middle;
+				text-align: center;
+			}
+
+
+			&.facebook {
+				background-color: $color-facebook;
+
+				&:before {
+					content: '\f09a';
+				}
+			}
+
+			&.twitter {
+				background-color: $color-twitter;
+
+				&:before {
+					content: '\f099';
+				}
+			}
+
+			&.linkedin {
+				background-color: $color-linkedin;
+
+				&:before {
+					content: '\f0e1';
+				}
+			}
+
+			&.google-plus {
+				background-color: $color-google-plus;
+
+				&:before {
+					content: '\f0d5';
+				}
+			}
+		}
+	}
+}
+
+// The entry title gets a top gutter
+// *if* there's a submenu
+// *and* it's the first thing in the header
+body.has-submenu {
+	.entry-title {
+		&:first-child {
+			margin-top: $gutter;
+		}
+	}
+}
+
+.entry-featured {
+	margin-bottom: $gutter;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.entry-content {
+	li {
+		margin-left: $gutter-small;
+	}
+
+	ol {
+		margin-bottom: $gutter-small;
+
+		li {
+			list-style-type: decimal;
+		}
+	}
+
+	ul {
+		margin-bottom: $gutter-small;
+
+		li {
+			list-style-type: square;
+		}
+	}
+
+	h1, h2, h3, h4 {
+		margin-top: $gutter;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.post-navigation {
+	@extend %layout-container-padding;
+	@include flex();
+
+	margin-top: $gutter;
+	margin-bottom: $gutter;
+	font-size: $font-size;
+	vertical-align: middle;
+	justify-content: space-between;
+	align-items: center;
+
+	.post-navigation-title {
+		flex: 0 0 100%;
+	}
+
+	.fa {
+		flex: 0 0 auto;
+		color: $brand-primary;
+	}
+
+	a {
+		@extend %no-link-underline;
+		flex: 1 1 40%;
+		color: $brand-primary;
+		padding: $gutter-tiny;
+		font-weight: 600;
+
+		&:hover {
+			color: $brand-primary;
+		}
+
+		&:nth-of-type(2) {
+			text-align: right;
+		}
+	}
+}
+
+.content-sidebar {
+	.entry-header, .entry-content {
+		@extend %layout-container-padding;
+	}
+
+	@media (min-width: $md) {
+		.content {
+			padding-left: $gutter;
+		}
+	}
+}
+
+@media (min-width: $sm) {
+	%entry-title {
+		font-size: 3.6rem;
+	}
+}
+
+@media (min-width: $md) {
+	%entry-title {
+		font-size: 4rem;
+	}
+}

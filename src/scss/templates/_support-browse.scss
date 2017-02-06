@@ -1,0 +1,22 @@
+body.page-template-template-support-browse {
+	.content-sidebar-wrap {
+		a {
+			@extend %no-link-underline;
+			color: $text-color;
+		}
+	}
+
+	.category {
+		list-style-type: none;
+		margin-left: 0;
+
+		> a {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+
+		> ul {
+			margin-left: $gutter-small;
+		}
+	}
+}

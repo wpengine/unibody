@@ -1,0 +1,273 @@
+$slide-time: 7s;
+
+.wpe-slider {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+
+	.slide-container {
+		position: relative;
+	}
+
+	@for $i from 2 through 6 {
+		&.slides-#{$i} {
+			.slide-container {
+				width: #{100% * $i};
+				animation: #{ $slide-time * $i } wpe-slider-#{$i} infinite;
+			}
+
+			figure {
+				width: #{100% / $i};
+			}
+		}
+	}
+
+	figure {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: 450px;
+		overflow: hidden;
+
+		&:before {
+			position: absolute;
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: rgba(71, 186, 199, 0.6);
+			z-index: 5;
+		}
+	}
+
+	img {
+		position: relative;
+		width: auto;
+		height: 100%;
+		max-width: initial;
+		right: 68%;
+		z-index: 1;
+	}
+
+	.shirts, .pillows, .sandwiches {
+		img {
+			position: absolute;
+			right: -20%;
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	figcaption {
+		position: absolute;
+		z-index: 10;
+		bottom: $gutter;
+		left: 0;
+		width: 100%;
+		padding: 0 $gutter-small;
+		color: $color-white;
+	}
+
+	h2 {
+		margin-bottom: 10px;
+		font: 3.2rem/0.9 $din-bold;
+		color: $color-white;
+		text-transform: uppercase;
+	}
+
+	p {
+		max-width: 500px;
+		margin-bottom: $gutter-small;
+		font: 1.5rem/1.2 $opensans;
+	}
+
+	.nav {
+		position: absolute;
+		left: -999em;
+
+		&:checked {
+			~ .slide-container {
+				animation: none;
+			}
+
+			~ .nav-label {
+				animation: none;
+			}
+		}
+	}
+
+	.nav-label {
+		@include corners( false, true, true, false, 3px );
+		display: inline-block;
+		background-color: $color-pelorous;
+		width: 11px;
+		height: 10px;
+		margin: $gutter-small 3px 0 0;
+		text-indent: -999em;
+		cursor: pointer;
+
+		&:hover, &:focus, &:active {
+			background-color: $color-gable;
+		}
+	}
+
+	.nav-label-0 {
+		margin-left: $gutter-small;
+	}
+
+	@for $i from 0 through 6 {
+		.nav-#{$i} {
+			&:checked {
+				~ .nav-label-#{$i} {
+					background-color: $brand-primary;
+				}
+
+				~ .slide-container {
+					@include wpe-transition( all, 0.3s );
+					left: #{ -100% * $i };
+				}
+			}
+		}
+
+		@for $j from 0 through ( $i - 1 ) {
+			&.slides-#{$i} {
+				.nav-label-#{$j} {
+					animation: #{ $slide-time * $i } wpe-slider-nav-#{$i} infinite;
+					animation-delay: #{ $slide-time * $j }s;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $xs) {
+		img {
+			right: 25%;
+		}
+	}
+
+	@media (min-width: 600px) {
+		img {
+			right: 10%;
+		}
+	}
+
+	@media (min-width: 710px) {
+		img {
+			right: 0;
+		}
+	}
+
+	@media (min-width: $sm) {
+		figcaption {
+			padding: 0 $gutter;
+		}
+
+		h2 {
+			font-size: 5.4rem;
+			font-size: 4.6vw;
+		}
+
+		.nav-label-0 {
+			margin-left: $gutter;
+		}
+
+		.shirts, .pillows, .sandwiches {
+			img {
+				right: -10%;
+			}
+		}
+	}
+
+	@media (min-width: 812px) {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	@media (min-width: $md) {
+		figure {
+			&:before {
+				display: none;
+			}
+		}
+
+		img {
+			position: absolute;
+			top: 50%;
+			transform: translateY( -50% );
+		}
+
+		figcaption {
+			padding: 0 $gutter-large;
+		}
+
+		.nav-label-0 {
+			margin-left: $gutter-large;
+		}
+
+		.shirts, .pillows, .sandwiches {
+			img {
+				right: 0;
+			}
+		}
+	}
+
+	@media (min-width: $lg) {
+		h2 {
+			font-size: 6.2rem;
+		}
+
+		.foosball img {
+			top: 32%;
+		}
+
+		.socks img {
+			top: 52%;
+		}
+
+		.monster img {
+			top: 45%;
+		}
+	}
+}
+
+// sass-lint:disable-all
+
+// Define keyframes
+@for $i from 2 through 6 {
+
+	$offset: floor( ( 100 - ( $i * 5 ) ) / $i );
+
+	@keyframes wpe-slider-#{$i} {
+		@for $j from 0 through ( $i - 1 ) {
+
+			$start: ( $offset * $j ) + ( 5 * $j );
+			$end: ( $offset * ( $j + 1 ) ) + ( 5 * $j );
+
+			#{$start}%, #{$end}% {
+				left: #{ $j * -100% };
+			}
+		}
+
+		100% {
+			left: 0;
+		}
+	}
+
+	@keyframes wpe-slider-nav-#{$i} {
+
+		0%, #{$offset}% {
+			background-color: $brand-primary;
+		}
+
+		@for $j from 1 through ( $i - 1 ) {
+			$start: ( $offset * $j ) + ( 5 * $j );
+			$end: ( $offset * ( $j + 1 ) ) + ( 5 * $j );
+
+			#{$start}%, #{$end}% {
+				background-color: $color-pelorous;
+			}
+		}
+	}
+}

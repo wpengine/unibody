@@ -1,0 +1,82 @@
+// Currently only used on the Support Homepage
+
+.status-bar {
+	@extend %layout-container-padding-large;
+	margin-left: 0;
+	min-height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	z-index: 110000;
+	background-color: $color-gable;
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	p {
+		color: $color-white;
+		font-size: 1.8rem;
+		margin: 0;
+	}
+
+	a {
+		@extend %no-link-underline;
+		color: $color-white;
+	}
+
+	.status {
+		ul {
+			display: none;
+		}
+	}
+
+	.static {
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 25px 25px;
+		font-weight: 600;
+		padding-right: $gutter;
+
+		&.normal {
+			background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQuNyAyNC43IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNC43IDI0Ljc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTIuMywyNC43QzUuNSwyNC43LDAsMTkuMSwwLDEyLjNTNS41LDAsMTIuMywwczEyLjMsNS41LDEyLjMsMTIuM1MxOS4xLDI0LjcsMTIuMywyNC43eiBNMTIuMywyIEM2LjYsMiwyLDYuNiwyLDEyLjNzNC42LDEwLjMsMTAuMywxMC4zUzIyLjcsMTgsMjIuNywxMi4zUzE4LDIsMTIuMywyeiIvPjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iOS40LDE4LjMgNS4xLDE0IDYuNSwxMi42IDkuNCwxNS40IDE3LDcuOCAxOC40LDkuMiAiLz48L3N2Zz4=');
+		}
+
+		&.system-alert {
+			background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZjZjNDQzIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjcuNSAyMy44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNy41IDIzLjg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTMuMiwxNy4xbC0wLjMtNi4zYzAtMC4xLDAuMS0wLjEsMC4xLTAuMWgyLjFjMC4xLDAsMC4xLDAuMSwwLjEsMC4xTDE1LDE3LjFjMCwwLjEtMC4xLDAuMS0wLjEsMC4xaC0xLjUgQzEzLjMsMTcuMiwxMy4yLDE3LjIsMTMuMiwxNy4xeiBNMTMsMTguM2MwLTAuMSwwLjEtMC4xLDAuMS0wLjFoMS45YzAuMSwwLDAuMSwwLjEsMC4xLDAuMVYyMGMwLDAuMS0wLjEsMC4xLTAuMSwwLjFoLTEuOSBDMTMsMjAuMiwxMywyMC4xLDEzLDIwVjE4LjN6Ii8+PC9nPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yNy41LDIzLjhIMEwxMy44LDBMMjcuNSwyMy44eiBNMy41LDIxLjhIMjRMMTMuOCw0TDMuNSwyMS44eiIvPjwvc3ZnPg==');
+		}
+	}
+
+	.static, .status {
+		display: inline-block;
+	}
+
+	.controls {
+		display: none;
+	}
+
+	.scroll {
+		display: inline-block;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		vertical-align: bottom;
+		height: 25px;
+		width: 25px;
+
+		&.left {
+			background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQuNyAyNC43IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNC43IDI0Ljc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTIuMywyNC43QzUuNSwyNC43LDAsMTkuMSwwLDEyLjNTNS41LDAsMTIuMywwczEyLjMsNS41LDEyLjMsMTIuM1MxOS4xLDI0LjcsMTIuMywyNC43eiBNMTIuMywyICBDNi42LDIsMiw2LjYsMiwxMi4zQzIsMTgsNi42LDIyLjcsMTIuMywyMi43UzIyLjcsMTgsMjIuNywxMi4zQzIyLjcsNi42LDE4LDIsMTIuMywyeiIgaWQ9InBhdGg1IiAvPjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iOC45LDE3LjggMTQuMywxMi41IDguOSw3LjIgMTAuMyw1LjggMTcuMSwxMi41IDEwLjMsMTkuMyAiIGlkPSJwb2x5Z29uNyIgdHJhbnNmb3JtPSJtYXRyaXgoLTEsMCwwLDEsMjYsMCkiICAvPjwvc3ZnPg==');
+			margin-right: 10px;
+		}
+
+		&.right {
+			background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQuNyAyNC43IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNC43IDI0Ljc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTIuMywyNC43QzUuNSwyNC43LDAsMTkuMSwwLDEyLjNTNS41LDAsMTIuMywwczEyLjMsNS41LDEyLjMsMTIuM1MxOS4xLDI0LjcsMTIuMywyNC43eiBNMTIuMywyIEM2LjYsMiwyLDYuNiwyLDEyLjNDMiwxOCw2LjYsMjIuNywxMi4zLDIyLjdTMjIuNywxOCwyMi43LDEyLjNDMjIuNyw2LjYsMTgsMiwxMi4zLDJ6Ii8+PHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxMC4zLDE5LjMgOC45LDE3LjggMTQuMywxMi41IDguOSw3LjIgMTAuMyw1LjggMTcuMSwxMi41ICIvPjwvc3ZnPg==');
+		}
+	}
+}

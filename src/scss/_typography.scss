@@ -1,0 +1,186 @@
+
+::selection {
+	background: $color-deyork;
+	color: $color-gable;
+}
+
+html {
+	/* 10px browser default */
+	font-size: 10px;
+}
+
+body {
+	color: $text-color;
+	font-family: $opensans;
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+.site-inner {
+	font-size: $font-size;
+}
+
+a {
+	@extend %transition;
+	@extend %no-link-underline;
+	color: $text-color;
+	cursor: pointer;
+
+	.entry-content & {
+		@extend %link-underline;
+		color: $brand-primary;
+	}
+}
+
+p {
+	margin: 0 0 $gutter-small;
+	padding: 0;
+}
+
+ol, ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+hr {
+	border: 0;
+	border-collapse: collapse;
+	border-top: 1px solid $gray-lighter;
+	clear: both;
+	margin: 1em 0;
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+blockquote, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: $gutter;
+	border-color: $color-montecarlo;
+	padding: 0 $gutter_small;
+}
+
+button {
+	@extend %transition;
+}
+
+/* ## Headings
+--------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $din-bold;
+	line-height: 1;
+	text-transform: uppercase;
+	color: $heading-color;
+	margin: 0 0 $gutter-small;
+}
+
+h1, .h1 {
+	font-size: 3rem;
+}
+
+h2, .h2 {
+	font-size: 2.4rem;
+}
+
+h3, .h3 {
+	font-size: 2.2rem;
+}
+
+h4, .h4 {
+	font-size: 2rem;
+}
+
+h5, .h5 {
+	font-size: 1.8rem;
+}
+
+h6, .h6 {
+	font-size: 1.6rem;
+}
+
+/* ## Titles
+--------------------------------------------- */
+%entry-title {
+	margin-bottom: $gutter;
+	font: 2.4rem/0.875em $din-bold;
+	color: $color-pelorous;
+	text-transform: uppercase;
+
+	a {
+		@extend %no-link-underline;
+	}
+}
+
+%section-title {
+	font: 3rem/0.875em $din-bold;
+	text-transform: uppercase;
+	color: $color-pelorous;
+
+	a {
+		color: $color-pelorous;
+	}
+
+	@media (min-width: $xs) {
+		font-size: 4rem;
+	}
+}
+
+.section-title {
+	@extend %section-title;
+}
+
+.section-subheading {
+	font: 2.2rem/1 $din-bold;
+	text-transform: uppercase;
+	color: $heading-color;
+}
+
+.running-subheading {
+	font: 2rem/1.1 $din-regular;
+	text-transform: initial;
+	color: $heading-color;
+}
+
+/* # Font Sizes
+--------------------------------------------- */
+
+.font-12 {
+	font-size: 1.2rem;
+}
+
+.font-14 {
+	font-size: 1.4rem;
+}
+
+.font-16 {
+	font-size: 1.6rem;
+}
+
+.font-18 {
+	font-size: 1.8rem;
+}
+
+/* # Messages
+--------------------------------------------- */
+
+.error {
+	color: $brand-danger;
+}
+
+.caption {
+	font: 400 $font-size/1.25 $din-regular;
+	text-transform: uppercase;
+	font-style: normal;
+}

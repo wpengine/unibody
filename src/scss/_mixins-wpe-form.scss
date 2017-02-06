@@ -1,0 +1,193 @@
+// WPE Form Field defaults
+// ------------------------------
+// PRIVATE - default settings for wpe-form-field
+$wpe-field-default: (
+	height: 60px,
+	width: 100%,
+	padding: $gutter-small,
+	margin-bottom: $gutter-tiny,
+	font-size: 1em,
+	label-color: $text-color,
+	active-color: $text-color,
+	valid-color: $brand-success,
+	invalid-color: $brand-danger,
+	placeholder-background-color: $color-grayscale-1,
+	active-background-color: $color-grayscale-2,
+	textarea: false
+	);
+
+$wpe-field: ();
+
+@mixin wpe-form-field( $map: $wpe-field ) {
+
+	@extend %transition;
+
+	// Only overwrite defaults if $map is $wpe-field
+	@if $map == $wpe-field {
+		$wpe-field-default: map-merge($wpe-field-default, $map) !global;
+		$map: $wpe-field-default;
+	}
+
+	// Updates default map with new values
+	$map: map-merge($wpe-field-default, $map);
+
+	// Gets variables
+	$height: map-get($map, height);
+	$width: map-get($map, width);
+	$padding: map-get($map, padding);
+	$margin-bottom: map-get($map, margin-bottom);
+	$font-size: map-get($map, font-size);
+	$label-color: map-get($map, label-color);
+	$active-color: map-get($map, active-color);
+	$valid-color: map-get($map, valid-color);
+	$invalid-color: map-get($map, invalid-color);
+	$placeholder-background: map-get($map, placeholder-background-color);
+	$active-background: map-get($map, active-background-color);
+	$isTextarea: map-get($map, textarea);
+	$textarea-label-height: 30px;
+
+	// Input / Textarea properties
+	position: relative;
+	display: block;
+	z-index: 2;
+	height: $height;
+	width: $width;
+	padding: #{$padding * 1.5} $padding #{$padding * 0.5};
+	margin-bottom: $margin-bottom;
+	font-size: $font-size;
+	box-shadow: none;
+	resize: none;
+	outline: none;
+	background: none;
+
+	@if $isTextarea {
+		margin-top: $textarea-label-height;
+		padding-top: #{ $padding / 2 };
+	}
+
+	// Remove Chrome autofill styles
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	// Placeholder Styles
+	& + label {
+		position: relative;
+		display: block;
+		z-index: 1;
+		width: $width;
+		font-size: $font-size;
+		pointer-events: none;
+		background-color: $placeholder-background;
+
+		// Vertically align label with input
+		@if $isTextarea {
+			line-height: 1;
+			height: #{ $height + $textarea-label-height };
+			margin-top: #{ $height * -1 - $textarea-label-height };
+		}
+		@else {
+			line-height: $height;
+			height: $height;
+			margin-top: #{ $height * -1 - 5 };
+		}
+
+		&:before {
+			// Initial Text
+			display: inline-block;
+			content: attr(data-label);
+			color: $label-color;
+			white-space: nowrap;
+			margin-left: $padding;
+
+			// Transformation properties
+			transition-property: transform, color;
+			transition-duration: 0.2s;
+			transition-delay: 0;
+			transition-timing-function: ease-out;
+			transform-origin: left center;
+
+			@if $isTextarea {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	// Focused, active and valid states for input and placeholder
+	// Shifts up and adds a background white
+	&:focus,
+	&:active,
+	&:not([value=""]) {
+		+ label:before {
+			line-height: 1;
+			// Adjusted all calcs within translates according to to split up into various translateYs instead of using calc for IE 10 support
+			// http://stackoverflow.com/questions/21469350/not-possible-to-use-css-calc-with-transformtranlatex-in-ie
+			@if $isTextarea {
+				transform: none;
+			}
+			@else {
+				transform: translateY( -1 * $height / 4 ) scale(0.8, 0.8);
+			}
+		}
+	}
+
+	// Change placeholder value once text is entered.
+	&:valid {
+		+ label:before {
+			content: attr(alt);
+		}
+
+		@if $isTextarea == false {
+			+ label:after {
+				position: absolute;
+				font-family: 'FontAwesome';
+				right: $padding;
+				content: '\f00c';
+				color: $color-grayscale-5;
+			}
+		}
+	}
+
+	&:invalid {
+		+ label:before {
+			@if $isTextarea == false {
+				color: $invalid-color;
+			}
+		}
+
+		@if $isTextarea == false {
+			+ label:after {
+				position: absolute;
+				font-family: 'FontAwesome';
+				right: $padding;
+				content: '\f057';
+				color: $brand-danger;
+			}
+		}
+	}
+
+	&[value=""] {
+		+ label:before {
+			color: $text-color;
+		}
+
+		+ label:after {
+			display: none;
+		}
+	}
+
+	&:focus,
+	&:active {
+		& + label {
+			background-color: $active-background;
+
+			&:before {
+				color: $active-color;
+			}
+		}
+	}
+}

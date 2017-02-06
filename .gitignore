@@ -1,1 +1,10 @@
+# Dependencies
 node_modules
+
+# Build assets
+assets
+
+# Other
+.log
+.DS_Store
+Thumbnails.db

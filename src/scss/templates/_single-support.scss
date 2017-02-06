@@ -1,0 +1,33 @@
+body.single-support {
+
+	.content-sidebar-wrap {
+		padding-bottom: $gutter;
+	}
+
+	.content {
+		padding-top: $gutter;
+	}
+
+	.entry-title {
+		margin-bottom: $gutter;
+	}
+
+	.entry-info {
+		@extend %gray-1-box;
+		margin: 0 0 $gutter 0;
+
+		*:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.info-title {
+		font-weight: bold;
+	}
+
+	@media (min-width: $sm) {
+		.content {
+			padding-right: $gutter;
+		}
+	}
+}

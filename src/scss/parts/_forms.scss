@@ -1,0 +1,307 @@
+
+/* ## Forms
+--------------------------------------------- */
+
+input, select, textarea {
+	@include corners();
+
+	border: 0;
+	background-color: $color-grayscale-1;
+	color: $text-color;
+	font-weight: 400;
+	padding: 16px;
+	width: 100%;
+	max-width: 100%;
+
+	&:focus {
+		outline: none;
+		background-color: $color-grayscale-2;
+	}
+}
+
+input {
+	&[type="checkbox"], &[type="image"], &[type="radio"] {
+		width: auto;
+	}
+}
+
+.site-container {
+	button:disabled {
+		background-color: $gray-lighter;
+		border-width: 0;
+		color: $gray-dark;
+		cursor: not-allowed;
+
+		&:hover {
+			background-color: $gray-lighter;
+			border-width: 0;
+			color: $gray-dark;
+			cursor: not-allowed;
+		}
+	}
+
+	input {
+		&:disabled, &[type="button"]:disabled, &[type="reset"]:disabled, &[type="submit"]:disabled {
+			background-color: $gray-lighter;
+			border-width: 0;
+			color: $gray-dark;
+			cursor: not-allowed;
+
+			&:hover {
+				background-color: $gray-lighter;
+				border-width: 0;
+				cursor: not-allowed;
+			}
+		}
+	}
+}
+
+[type="search"] {
+	&::-webkit-search-cancel-button, &::-webkit-search-results-button {
+		display: none;
+	}
+}
+
+[type="submit"] {
+	@extend %button;
+	font-size: $font-size;
+}
+
+.autocomplete-container {
+	position: absolute;
+	background: $color-white;
+	padding: 0 $gutter-small $gutter-small;
+	border: 1px solid $color-grayscale-2;
+	border-top: 0;
+}
+
+.wpe-form {
+	@extend %layout-container-padding;
+
+	input[type='email'],
+	input[type='number'],
+	input[type='tel'],
+	input[type='text'],
+	input[type='url'] {
+		@include corners( false, true, true, false, 5px );
+		@include wpe-form-field();
+	}
+
+	$textarea-placeholder: (
+		height: 140px,
+		textarea: true,
+	);
+
+	// calling adaptive placeholder for textarea
+	textarea {
+		@include corners( false, true, true, false, 5px );
+		@include wpe-form-field( $textarea-placeholder );
+	}
+
+	label {
+		@include corners( false, true, true, false, 5px );
+		font-weight: 400;
+	}
+
+	.wpe-field {
+		max-width: 460px;
+		margin-bottom: $gutter-tiny;
+	}
+
+	.wpe-submit {
+		display: flex;
+		margin-top: $gutter-small;
+		justify-content: flex-start;
+		align-items: center;
+
+		.submitting {
+			display: none;
+			font-size: $gutter-small;
+			color: $color-pelorous;
+			margin-left: $gutter-tiny;
+		}
+
+		&.active {
+			.button {
+				@extend %button.active;
+			}
+
+			.submitting {
+				display: block;
+			}
+		}
+	}
+
+	.wpe-title {
+		margin: $gutter 0 $gutter-small;
+
+		legend {
+			margin: 0;
+			font-size: $font-size;
+			text-transform: uppercase;
+			color: $text-color;
+			line-height: 1.5;
+		}
+
+		p {
+			font-size: $font-size;
+			color: $heading-color;
+			line-height: 1.5;
+			margin: 0;
+		}
+	}
+
+	.wpe-hidden {
+		display: none;
+	}
+
+	// Bootstrap Select styles
+	.bootstrap-select.btn-group {
+
+		// The button that takes the place of the select
+		.dropdown-toggle {
+			@include corners( false, true, true, false, 5px );
+			position: relative;
+			padding: $gutter-small;
+			background-color: $color-grayscale-1;
+			border: 0;
+			text-transform: none;
+			border-radius: 0;
+			text-align: left;
+			color: $text-color;
+
+			&:hover,
+			&:focus,
+			&:active {
+				background: $color-grayscale-2;
+				box-shadow: none;
+				outline: 0;
+			}
+
+			// A span with a title class is inserted through JS if a value is successfully picked.
+			.title {
+				position: absolute;
+				display: inline-block;
+				left: #{ $gutter-small };
+				top: #{ $gutter-small / 2 };
+				font-size: 0.8em;
+
+				~ .filter-option {
+					transform: translateY( #{ $gutter-small / 2 } );
+				}
+
+				~ .bs-caret {
+					&:after {
+						position: absolute;
+						font-family: 'FontAwesome';
+						right: $gutter-small;
+						content: '\f00c';
+						color: $color-grayscale-5;
+					}
+
+					.caret {
+						display: none;
+					}
+				}
+			}
+		}
+
+		// The dropdown menu of choices
+		.dropdown-menu {
+			border-radius: 0;
+
+			li {
+				margin-left: 0;
+				list-style-type: none;
+			}
+
+			>li>a:hover,
+			>li>a:focus {
+				background-color: $color-pelorous;
+
+				.text {
+					color: $color-white;
+				}
+			}
+		}
+	}
+
+	.message {
+		display: none;
+		background-color: $color-white;
+		color: $text-color;
+		max-width: 480px;
+		margin: $gutter auto;
+		align-items: stretch;
+
+		.icon {
+			background-color: $brand-success;
+			background-repeat: no-repeat;
+			background-size: 40%;
+			background-position: center;
+			flex: 0 0 100px;
+		}
+
+		.text {
+			flex: 1 1 100%;
+			padding: $gutter-small;
+		}
+
+		&.success {
+			display: flex;
+
+			.icon {
+				background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzYgMjIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM2IDIyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTMuNiwyMkMxMy42LDIyLDEzLjYsMjIsMTMuNiwyMkwxMy42LDIyYzAsMC0wLjEsMC0wLjEsMGMwLDAsMCwwLDAsMGgwYzAsMCwwLDAsMCwwaDBjMCwwLDAsMCwwLDANCgljMCwwLDAsMCwwLDBjMCwwLDAsMCwwLDBsMCwwYzAsMC0wLjEsMC0wLjEtMC4xTDAuMSw5LjFDMCw5LDAsOC44LDAuMSw4LjdjMC4xLTAuMSwwLjMtMC4xLDAuNCwwbDEzLjEsMTIuN2wyMi0yMS4zDQoJYzAuMS0wLjEsMC4zLTAuMSwwLjQsMGMwLjEsMC4xLDAuMSwwLjMsMCwwLjRMMTMuNywyMS45YzAsMC0wLjEsMC0wLjEsMC4xbDAsMGMwLDAsMCwwLDAsMGgwYzAsMCwwLDAsMCwwaDBjMCwwLDAsMCwwLDANCgljMCwwLDAsMCwwLDBDMTMuNiwyMiwxMy42LDIyLDEzLjYsMjJDMTMuNiwyMiwxMy42LDIyLDEzLjYsMjJDMTMuNiwyMiwxMy42LDIyLDEzLjYsMjJMMTMuNiwyMkMxMy42LDIyLDEzLjYsMjIsMTMuNiwyMkwxMy42LDIyDQoJQzEzLjYsMjIsMTMuNiwyMiwxMy42LDIyTDEzLjYsMjJDMTMuNiwyMiwxMy42LDIyLDEzLjYsMjJ6Ii8+PC9zdmc+');
+			}
+		}
+
+		&.has_error {
+			display: flex;
+
+			.icon {
+				background-color: $brand-danger;
+				background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCQkJIHZpZXdCb3g9IjAgMCAyOCAyOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjggMjg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojRkZGRkZGO308L3N0eWxlPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yNy41LDI4Yy0wLjEsMC0wLjMtMC4xLTAuNC0wLjJMMTQsMTQuOEwwLjksMjcuOGMtMC4yLDAuMi0wLjUsMC4yLTAuOCwwYy0wLjItMC4yLTAuMi0wLjUsMC0wLjhMMTMuMiwxNA0KCQkJTDAuMiwwLjljLTAuMi0wLjItMC4yLTAuNSwwLTAuOGMwLjItMC4yLDAuNS0wLjIsMC44LDBMMTQsMTMuMkwyNy4xLDAuMmMwLjItMC4yLDAuNS0wLjIsMC44LDBjMC4yLDAuMiwwLjIsMC41LDAsMC44TDE0LjgsMTQNCgkJCWwxMy4xLDEzLjFjMC4yLDAuMiwwLjIsMC41LDAsMC44QzI3LjcsMjcuOSwyNy42LDI4LDI3LjUsMjh6Ii8+PC9zdmc+');
+			}
+		}
+	}
+
+	&.white {
+
+		$args: (
+			placeholder-background-color: $color-white,
+			active-background-color: $color-white,
+			);
+
+		input[type='email'],
+		input[type='number'],
+		input[type='tel'],
+		input[type='text'],
+		input[type='url'] {
+			@include wpe-form-field( $args );
+		}
+
+		$textarea-args: (
+			height: 140px,
+			textarea: true,
+			placeholder-background-color: $color-white,
+			active-background-color: $color-white,
+		);
+
+		// calling adaptive placeholder for textarea
+		textarea {
+			@include wpe-form-field( $textarea-args );
+		}
+
+		.bootstrap-select.btn-group {
+			.dropdown-toggle {
+				background-color: $color-white;
+
+				&:hover,
+				&:focus,
+				&:active {
+					background: $color-white;
+				}
+			}
+		}
+	}
+}

@@ -12,8 +12,20 @@ Built on [Fractal](http://fractal.build)
 git clone https://github.com/hello-jason/unibody unibody && cd unibody
 ```
 
-* Run server
+* Install dependencies
 
 ```bash
-fractal start --sync
+npm install
+```
+
+* Build assets
+
+```bash
+gulp
+```
+
+* Run server (with browsersync and file watching)
+
+```bash
+fractal start --sync --watch
 ```

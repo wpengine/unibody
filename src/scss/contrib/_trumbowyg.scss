@@ -1,0 +1,42 @@
+@import "trumbowyg/trumbowyg";
+
+.trumbowyg-editor {
+	color: $text-color;
+
+	h1, h2, h3 {
+		font-family: 'DINNextLTW01-UltraLight 706122', 'Open Sans', sans-serif;
+		font-weight: lighter;
+		line-height: 1em;
+		color: $heading-color;
+		text-transform: uppercase;
+		margin: 1.666em 0 0.833em;
+	}
+
+	h1 {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 36px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	p, li, div, blockquote {
+		font-family: $opensans;
+		font-size: 14px;
+	}
+
+	p {
+		margin: 0 0 24px;
+		padding: 0;
+		line-height: 1.75em;
+	}
+
+	li {
+		list-style-type: disc;
+		margin-left: $gutter-small;
+	}
+}
