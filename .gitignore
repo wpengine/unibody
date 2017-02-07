@@ -3,7 +3,7 @@ node_modules
 
 # Build assets
 build
-public/css
+public/css/style.css
 .publish
 
 # Other
