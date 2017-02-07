@@ -1,19 +1,21 @@
 {
     "title": "Tile",
-    "status": "wip",
+    "status": "prototype",
     "context": {
-        "modifier": "default",
-        "closeButtonText": "close",
-        "text": "This is the default banner"
+      "tile__image": "https://placeholdit.imgix.net/~text?txtsize=16&txt=40&w=40&h=40",
+      "tile__imagealt": "Image Alt Text",
+      "tile__heading": "Reliable help",
+      "tile__paragraph": "24/7 technical support from leading WordPress experts.",
+      "tile__link": "https://wpengine.com/partners/agencies/"
     },
     "variants": [
-        {
-            "name": "faq",
-            "label": "FAQ",
-            "context": {
-                "modifier": "alert",
-                "text": "This is a warning banner"
-            }
+      {
+        "name": "icon-with-button",
+        "context": {
+          "tile__heading": "",
+          "tile__paragraph": "",
+          "tile__link": ""
         }
+      }
     ]
 }

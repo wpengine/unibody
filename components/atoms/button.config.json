@@ -1,0 +1,17 @@
+{
+    "status": "prototype",
+    "context": {        
+        "types": [{
+          "button__text": "Default Button",
+          "button__link": "https://wpengine.com/plans"
+        },{
+          "button__modifier": "gable",
+          "button__text": "Dark Blue Button",
+          "button__link": "https://wpengine.com/plans"
+        },{
+          "button__modifier": "white",
+          "button__text": "White Button",
+          "button__link": "https://wpengine.com/plans"
+        }]
+  }
+}
