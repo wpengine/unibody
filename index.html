@@ -11,7 +11,9 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="themes/mandelbrot/css/teal.css?cachebust=1.1.0" type="text/css">
+<link rel="stylesheet" href="themes/mandelbrot/css/default.css?cachebust=1.1.0" type="text/css">
+
+<link rel="stylesheet" href="css/mandelbrot-custom.css?cachebust=1.1.0" type="text/css">
 
 
 <title>Unibody | Unibody</title>
@@ -71,33 +73,9 @@
     
     <p>This is your index page. You can edit its contents at <code>docs/01-index.hbs</code></p>
 <h2 id="it-s-a-button-">It’s a button!</h2>
-<style>
-.button {
-    -webkit-clip-path: url(corners.svg);
-    clip-path: url(corners.svg);
-    clip-path: polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);
-    -webkit-clip-path: polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);
-    display: inline-block;
-    padding: 15px;
-    width: auto;
-    max-width: 100%;
-    color: #fff;
-    background-color: #eb6126;
-    font: 700 1em/1em Open Sans,sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    box-shadow: none;
-    text-decoration: none;
-    border: 0;
-    cursor: pointer;
-}
-.button:hover {
-    background-color: #40bac8;
-    color: #fff;
-}
-</style>
-
-<p><a href="https://wpengine.com/plans/" class="button ">See our plans</a></p>
+<p>{{#each types}}
+<a href="{{ button__link }}" class="button {{ button__modifier }}">{{ button__text }}</a>
+{{/each}}</p>
 
     
 
@@ -118,6 +96,52 @@
         
         <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
             <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Overview</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="docs/svg-icons.html" data-pjax>
+                <span>Svg Icons</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="docs/tokens.html" data-pjax>
+                <span>Design tokens</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
 
     
 <div class="Navigation-group">
@@ -150,7 +174,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -185,7 +209,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -200,8 +224,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/tile--image.html" data-pjax>
-                <span>Image</span>
+            <a class="Tree-entityLink" href="components/detail/tile--icon-with-button.html" data-pjax>
+                <span>Icon With Button</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -209,7 +233,31 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/tile--image-with-button.html" data-pjax>
+                <span>Image With Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -267,10 +315,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-hero">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Hero</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/hero.html" data-pjax>
-                <span>Hero</span>
+            <a class="Tree-entityLink" href="components/detail/hero--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -278,7 +337,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -287,6 +346,107 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/hero--faq.html" data-pjax>
+                <span>FAQ</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/hero--headline-and-button.html" data-pjax>
+                <span>Headline And Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/hero--headline-only.html" data-pjax>
+                <span>Headline Only</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/hero--no-button.html" data-pjax>
+                <span>No Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -349,45 +509,6 @@
 
 </div>
 
-
-
-    
-<div class="Navigation-group">
-
-<div class="Tree" data-behaviour="tree" id="tree-docs">
-    <h3 class="Tree-title">documentation</h3>
-    <ul class="Tree-items Tree-depth-1">
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
-                <span>Overview</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="docs/tokens.html" data-pjax>
-                <span>Design tokens</span>
-                
-            </a>
-        </li>
-        
-    
-
-    </ul>
-</div>
-
-</div>
-
-
-
-    
 
 
 </nav>
