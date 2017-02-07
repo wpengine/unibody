@@ -1,18 +1,43 @@
+// Variables
+var fractal = "node_modules/@frctl/fractal/bin/fractal";
+
+// Package variables
 var gulp      = require('gulp'); // core gulp
 var sass = require('gulp-sass'); // compile scss
-var ghPages = require('gulp-gh-pages');
+var ghPages = require('gulp-gh-pages'); // deploy to github pages
+var shell = require('gulp-shell'); // allows shell commands
 
+//
+// Tasks
+//
+
+// Compile scss
 gulp.task('sass', function () {
   return gulp.src('./src/scss/wpe/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./public/css/'));
 });
 
-gulp.task('deploy', function() {
+// Run fractal's built-in build command
+gulp.task('build', shell.task([
+  fractal + ' build'
+]));
+
+// Deploy site to GitHub pages
+gulp.task('gh-pages', function() {
   return gulp.src('./build/**/*')
+  	.pipe(shell([
+  		]))
     .pipe(ghPages());
 });
 
-gulp.task('default', function() {
+// Run fractal server
+gulp.task('watch', shell.task([
+  fractal + ' start --sync --watch'
+]));
 
-});
+//
+// Gulp sequential tasks
+//
+gulp.task('serve', ['sass', 'watch']);
+gulp.task('deploy', ['sass', 'build', 'gh-pages']);

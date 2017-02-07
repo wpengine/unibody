@@ -18,14 +18,30 @@ git clone https://github.com/hello-jason/unibody unibody && cd unibody
 npm install
 ```
 
-* Build assets
+* Global gulp (if you don't already have it)
 
 ```bash
-gulp
+npm install -g gulp
 ```
 
 * Run server (with browsersync and file watching)
 
 ```bash
-fractal start --sync --watch
+gulp serve
+```
+
+## Gulp tasks
+
+* Build assets and run web server (with browsersync and file watching)
+
+```bash
+gulp serve
+
+```
+
+* Deploy to GitHub Pages
+
+```bash
+gulp deploy
+
 ```
