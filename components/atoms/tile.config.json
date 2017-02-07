@@ -2,7 +2,8 @@
     "title": "Tile",
     "status": "prototype",
     "context": {
-      "tile__image": "https://placeholdit.imgix.net/~text?txtsize=16&txt=40&w=40&h=40",
+      "tile__image": "/img/svg-icons/user-support.svg",
+      "tile__imageclass": "wpe-icon",
       "tile__imagealt": "Image Alt Text",
       "tile__heading": "Reliable help",
       "tile__paragraph": "24/7 technical support from leading WordPress experts.",
@@ -10,11 +11,31 @@
     },
     "variants": [
       {
+        "name": "default",
+        "label": "Icon Without Button"
+      },
+      {
         "name": "icon-with-button",
         "context": {
-          "tile__heading": "",
-          "tile__paragraph": "",
-          "tile__link": ""
+          "tile__image": "/img/svg-icons/atom.svg",
+          "tile__imageclass": "wpe-icon",
+          "tile__imagealt": "Image Alt Text",
+          "tile__heading": "Technology",
+          "tile__paragraph": "Our best-in-class architecture and highly redundant systems keep WordPress fast, scalable, and secure.",
+          "tile__link": "https://wpengine.com/partners/agencies/",
+          "button__text": "Learn More"
+        }
+      },
+      {
+        "name": "image-with-button",
+        "context": {
+          "tile__image": "https://wpengine.com/wp-content/uploads/2016/08/finely-tuned-expert-grid.png",
+          "tile__imageclass": "wpe-icon",
+          "tile__imagealt": "Image Alt Text",
+          "tile__heading": "Live Interview: David Endler Of Manifest On Web Security",
+          "tile__paragraph": "At WP Engine, we’re passionate about helping our...",
+          "tile__link": "https://wpengine.com/blog/david-endler-live-interview/",
+          "button__text": "Learn More"
         }
       }
     ]
