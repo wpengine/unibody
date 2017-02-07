@@ -1,0 +1,18 @@
+{
+    "title": "Tiles",
+    "status": "ready",
+    "context": {
+        "modifier": "default",
+        "closeButtonText": "close",
+        "text": "This is the default banner"
+    },
+    "variants": [
+        {
+            "name": "image",
+            "context": {
+                "modifier": "alert",
+                "text": "This is a warning banner"
+            }
+        }
+    ]
+}
