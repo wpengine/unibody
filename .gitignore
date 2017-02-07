@@ -2,6 +2,7 @@
 node_modules
 
 # Build assets
+build
 public/css
 
 # Other
