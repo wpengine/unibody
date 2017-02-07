@@ -28,8 +28,6 @@ fractal.docs.set('path', path.join(__dirname, 'docs'));
 /*
  * Tell the Fractal web preview plugin where to look for static assets.
  */
-// fractal.web.set('', path.join(__dirname, 'public'));
-
 fractal.web.set('static.path', __dirname + '/public');
 
 /*
@@ -38,13 +36,13 @@ fractal.web.set('static.path', __dirname + '/public');
 const mandelbrot = require('@frctl/mandelbrot'); // require the Mandelbrot theme module
 
 const myCustomisedTheme = mandelbrot({
-    lang: 'en-us',
-    skin: "teal",
-    panels: ["html", "view", "context", "info", "notes"]
+    lang: "en-us",
+    styles: ["default", "/css/mandelbrot-custom.css"],
+    panels: ["html", "view", "context", "info", "notes"],
+    nav: ["docs", "components"]
     // any other theme configuration values here
 });
 fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
-
 
 /*
  * Build config

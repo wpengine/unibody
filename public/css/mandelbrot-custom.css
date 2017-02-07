@@ -1,0 +1,16 @@
+.Header {
+	background-color: #162a33;
+}
+
+.Header .Header-title {
+	background: url(/img/wpe-logo.svg) no-repeat;
+	background-size: contain;
+	width: 286px;
+	height: 47px;
+	margin: 22px 10px 10px;
+	text-indent: -9999em;
+}
+
+a, a:hover, a:focus {
+	color: #40bac8;
+}
