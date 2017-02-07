@@ -1,6 +1,6 @@
 {
-    "title": "Tiles",
-    "status": "ready",
+    "title": "Tile",
+    "status": "wip",
     "context": {
         "modifier": "default",
         "closeButtonText": "close",
@@ -8,7 +8,8 @@
     },
     "variants": [
         {
-            "name": "image",
+            "name": "faq",
+            "label": "FAQ",
             "context": {
                 "modifier": "alert",
                 "text": "This is a warning banner"
