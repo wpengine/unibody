@@ -149,10 +149,10 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-8f3d5397e0af5b9c13bc73ca88bde4da-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block icon-above text-left icon-size-x-small"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block no-corners icon-above text-left icon-size-x-small"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-container"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://placeholdit.imgix.net/~text?txtsize&amp;#x3D;16&amp;amp;txt&amp;#x3D;40&amp;amp;w&amp;#x3D;40&amp;amp;h&amp;#x3D;40"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image Alt Text"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wpe-icon"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/img/svg-icons/user-support.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image Alt Text"</span> /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Reliable help<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>24/7 technical support from leading WordPress experts.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -165,10 +165,10 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8f3d5397e0af5b9c13bc73ca88bde4da-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block icon-above text-left icon-size-x-small"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block no-corners icon-above text-left icon-size-x-small"</span>&gt;</span>
 	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-container"</span>&gt;</span>
-			<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ tile__image }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ tile__imagealt }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ tile__imageclass }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ tile__image }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ tile__imagealt }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
 		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span></span><span class="hljs-template-variable">{{ tile__heading }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ tile__paragraph }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -183,7 +183,8 @@
         
             
             <pre>{
-  <span class="hljs-attr">"tile__image"</span>: <span class="hljs-string">"https://placeholdit.imgix.net/~text?txtsize=16&amp;txt=40&amp;w=40&amp;h=40"</span>,
+  <span class="hljs-attr">"tile__image"</span>: <span class="hljs-string">"/img/svg-icons/user-support.svg"</span>,
+  <span class="hljs-attr">"tile__imageclass"</span>: <span class="hljs-string">"wpe-icon"</span>,
   <span class="hljs-attr">"tile__imagealt"</span>: <span class="hljs-string">"Image Alt Text"</span>,
   <span class="hljs-attr">"tile__heading"</span>: <span class="hljs-string">"Reliable help"</span>,
   <span class="hljs-attr">"tile__paragraph"</span>: <span class="hljs-string">"24/7 technical support from leading WordPress experts."</span>,
@@ -211,7 +212,7 @@
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="tile--default.html">
-                    <span>Default</span>
+                    <span>Icon Without Button</span>
                 </a>, 
             
                 <a href="tile--icon-with-button.html">
@@ -247,6 +248,17 @@
             <span class="Meta-value">components/atoms/tile.hbs</span>
         </li>
         
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="three-tiles.html">@<span>three-tiles</span></a>, 
+            
+                <a href="two-tiles.html">@<span>two-tiles</span></a>
+            
+            </span>
+        </li>
         
     </ul>
 </div>
@@ -291,16 +303,6 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../index.html" data-pjax>
-                <span>Overview</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/svg-icons.html" data-pjax>
                 <span>Svg Icons</span>
                 
@@ -311,7 +313,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/tokens.html" data-pjax>
+            <a class="Tree-entityLink" href="../../index.html" data-pjax>
                 <span>Design tokens</span>
                 
             </a>
@@ -349,7 +351,31 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="button.html" data-pjax>
-                <span>Button</span>
+                <span>Button &lt;button&gt;</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button-anchor.html" data-pjax>
+                <span>Button &lt;a&gt;</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -384,7 +410,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="tile--default.html" data-pjax>
-                <span>Default</span>
+                <span>Icon Without Button</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -474,30 +500,6 @@
             
     
         
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="bold-statements.html" data-pjax>
-                <span>Bold Statements</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-hero">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Hero</span>
@@ -513,30 +515,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="hero--default.html" data-pjax>
                 <span>Default</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="hero--faq.html" data-pjax>
-                <span>FAQ</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -645,7 +623,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -669,7 +647,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
