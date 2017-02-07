@@ -1,10 +1,10 @@
 var gulp      = require('gulp'); // core gulp
-var gulp-sass = require('gulp-sass'); // compile scss
+var sass = require('gulp-sass'); // compile scss
 
 gulp.task('sass', function () {
-  return gulp.src('./src/scss/**/*.scss')
+  return gulp.src('./src/scss/wpe/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./assets/css/main.css'));
+    .pipe(gulp.dest('./public/css/'));
 });
 
 gulp.task('default', function() {
