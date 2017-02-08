@@ -1,0 +1,302 @@
+/* ## Box Sizing
+--------------------------------------------- */
+
+html, input[type="search"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: inherit;
+
+	&:before, &:after {
+		box-sizing: inherit;
+	}
+}
+
+/* ## Float Clearing
+--------------------------------------------- */
+
+.author-box:before, .clearfix:before, .entry:before, .entry-content:before, .footer-widgets:before, .nav-primary:before, .nav-secondary:before, .pagination:before, .site-container:before, .site-footer:before, .site-header:before, .site-inner:before, .widget:before, .wrap:before {
+	display: table;
+	content: " ";
+}
+
+.author-box:after, .clearfix:after, .entry:after, .entry-content:after, .footer-widgets:after, .nav-primary:after, .nav-secondary:after, .pagination:after, .site-container:after, .site-footer:after, .site-header:after, .site-inner:after, .widget:after, .wrap:after {
+	display: table;
+	clear: both;
+	content: " ";
+}
+
+/* # Defaults
+---------------------------------------------------------------------------------------------------- */
+
+body {
+	margin: 0;
+}
+
+/* ## Objects
+--------------------------------------------- */
+
+embed, iframe, img, object, video, .wp-caption {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+figure {
+	margin: 0;
+}
+
+/* ## Tables
+--------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin-bottom: 40px;
+	width: 100%;
+	word-break: break-word;
+}
+
+tbody {
+	border-bottom: 1px solid #EEE;
+}
+
+td, th {
+	text-align: left;
+}
+
+td {
+	border-top: 1px solid #EEE;
+	padding: 6px;
+}
+
+th {
+	font-weight: 400;
+	padding: 0 6px;
+}
+
+td:first-child, th:first-child {
+	padding-left: 0;
+}
+
+/* ## Screen Reader Text
+--------------------------------------------- */
+
+.screen-reader-text {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+
+	span {
+		position: absolute;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		width: 1px;
+		border: 0;
+		overflow: hidden;
+	}
+}
+
+.screen-reader-shortcut {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus, .screen-reader-shortcut:focus, .genesis-nav-menu .search input[type="submit"]:focus, .widget_search input[type="submit"]:focus {
+	display: block;
+	clip: auto;
+	height: auto;
+	width: auto;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 15px 23px 14px;
+	color: #333;
+	background: $color-white;
+	z-index: 100000;
+
+	/* Above WP toolbar. */
+	text-decoration: none;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.more-link {
+	position: relative;
+}
+
+/* # Common Classes
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Avatar
+--------------------------------------------- */
+
+.avatar {
+	float: left;
+}
+
+.author-box .avatar, .alignleft .avatar {
+	margin-right: $gutter_small;
+}
+
+.alignright .avatar {
+	margin-left: $gutter_small;
+}
+
+/* ## Genesis
+--------------------------------------------- */
+
+.author-box {
+	p {
+		margin-bottom: 0;
+	}
+
+	.avatar {
+		margin-bottom: $gutter;
+	}
+}
+
+.author-box-title {
+	margin-bottom: 6px;
+}
+
+.author-box-social {
+	font-size: 1.2rem;
+
+	a {
+		color: $color-rollingstone;
+		padding-right: $gutter_small;
+	}
+}
+
+/* ## Search Form
+--------------------------------------------- */
+
+.search-form {
+	overflow: hidden;
+}
+
+.entry-content .search-form {
+	margin-bottom: 40px;
+	width: 50%;
+}
+
+.site-header .search-form {
+	margin-bottom: 40px;
+	width: 50%;
+	float: right;
+	margin: 12px auto 0;
+}
+
+.post-password-form input[type="submit"], .search-form input[type="submit"] {
+	margin-top: 10px;
+}
+
+.genesis-nav-menu .search input[type="submit"] {
+	position: absolute;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+}
+
+/* ## WordPress
+--------------------------------------------- */
+
+a {
+	&.aligncenter img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&.alignnone {
+		display: inline-block;
+	}
+}
+
+.alignleft {
+	float: left;
+	text-align: left;
+}
+
+.alignright {
+	float: right;
+	text-align: right;
+}
+
+a {
+	&.alignleft, &.alignnone, &.alignright {
+		max-width: 100%;
+	}
+}
+
+img.centered, .aligncenter {
+	display: block;
+	margin: 0 auto 24px;
+}
+
+img.alignnone, .alignnone {
+	margin-bottom: 12px;
+}
+
+a.alignleft, img.alignleft, .wp-caption.alignleft {
+	margin: 0 24px 24px 0;
+}
+
+a.alignright, img.alignright, .wp-caption.alignright {
+	margin: 0 0 24px 24px;
+}
+
+.wp-caption-text {
+	padding-top: $gutter_small;
+	font-style: italic;
+	margin: 0;
+}
+
+.entry-content {
+	p.wp-caption-text {
+		margin-bottom: 0;
+	}
+
+	.wp-audio-shortcode, .wp-playlist, .wp-video {
+		margin: 0 0 28px;
+	}
+}
+
+/* # Plugins
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Jetpack
+--------------------------------------------- */
+
+// sass-lint:disable no-ids
+#wpstats {
+	display: none;
+}
+// sass-lint:enable no-ids
+
+/* # Skip Links
+---------------------------------------------------------------------------------------------------- */
+
+.genesis-skip-link {
+	margin: 0;
+
+	li {
+		height: 0;
+		width: 0;
+		list-style: none;
+	}
+}

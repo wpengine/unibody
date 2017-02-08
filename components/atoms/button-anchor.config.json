@@ -1,0 +1,9 @@
+{
+  "title": "Button; rendered with &lt;a&gt;",
+  "label": "Button &lt;a&gt;",
+  "status": "prototype",
+  "context": {       
+    "button__text": "Default Button",
+    "button__link": "https://wpengine.com/plans"
+  }
+}

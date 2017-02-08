@@ -1,0 +1,22 @@
+body.page-template-template-perfintel-page {
+
+	.content-band-customer-success {
+		.freeform {
+			padding-top: $gutter-small;
+		}
+	}
+
+	.content-band-product {
+		.content-band-html {
+			p {
+				margin: $gutter-small 0 $gutter-large;
+				max-width: 700px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+}

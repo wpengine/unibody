@@ -1,0 +1,38 @@
+{
+	"title": "Hero",
+	"status": "prototype",
+	"context": {
+		"hero__image": "https://wpengine.com/wp-content/themes/wpengine/images/hero/home.jpg",
+		"hero__imagealt": "Image Alt Text",
+		"hero__heading": "Drive your business forward faster with managed WordPress hosting",
+		"hero__paragraph": "Build faster, protect your brand and grow your business with a WordPress platform built to power remarkable online experiences."
+	},
+
+	"variants": [
+		{
+			"name": "headline-and-button",
+			"context": {
+				"hero__image": "https://wpengine.com/wp-content/themes/wpengine/images/hero/plans.jpg",
+				"hero__imagealt": "Image Alt Text",
+				"hero__heading": "Powering your brand's digital experience starts here"
+			}
+		},
+		{
+			"name": "headline-only",
+			"context": {
+				"hero__image": "https://wpengine.com/wp-content/themes/wpengine/images/hero/about-us.jpg",
+				"hero__imagealt": "Image Alt Text",
+				"hero__heading": "About WP Engine's Company Culture"
+			}
+		},
+		{
+			"name": "no-button",
+			"context": {
+				"hero__image": "https://wpengine.com/wp-content/themes/wpengine/images/hero/partners.jpg",
+				"hero__imagealt": "WP Engine Partners",
+				"hero__heading": "WP Engine Partners",
+				"hero__paragraph": "WP Engine is built for developers, which is why the best freelancers, consultants, and agencies use us as their WordPress platform of choice."
+			}
+		}
+	]
+}

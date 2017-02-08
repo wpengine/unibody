@@ -1,0 +1,121 @@
+body.page-template-template-enterprise-c {
+	.performance-matters {
+		@extend %page-width;
+
+		> .wrap {
+			@include corners();
+			margin: 0;
+			background-color: $color-pelorous;
+			color: $color-white;
+			max-width: 1000px;
+			padding-left: $gutter-small;
+			padding-right: $gutter-small;
+		}
+
+		.band-title {
+			color: $color-white;
+		}
+
+		.chart {
+			display: inline-block;
+			max-width: 430px;
+			height: auto;
+			&:first-child {
+				margin-right: $gutter;
+			}
+		}
+	}
+
+	.service-team {
+		.content-band-html {
+			padding: 0;
+		}
+	}
+
+	.full-service {
+		.content-band-html {
+			padding-top: $gutter;
+			padding-bottom: $gutter;
+			background-color: $color-grayscale-1;
+		}
+	}
+
+	@media (min-width: $md) {
+		.performance-matters {
+			> .wrap {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+ul.checkmark-list {
+	@include corners();
+	@include flex( column, nowrap );
+	padding: $gutter;
+	background: $color-pelorous;
+	color: $color-white;
+	font-size: 1.8rem;
+	font-weight: bold;
+
+	li {
+		position: relative;
+		list-style-type: none;
+		margin-left: 0;
+		border: 0 solid $brand-primary;
+		border-left-width: 1px;
+		padding: $gutter-small;
+		line-height: 1;
+
+		// Do half borders on the first and last elements
+		&:first-child {
+			border-image: linear-gradient(to top, $brand-primary 49%, rgba($brand-primary, 0) 50%) 1 100%;
+		}
+
+		&:last-child {
+			border-image: linear-gradient(to bottom, $brand-primary 49%, rgba($brand-primary, 0) 50%) 1 100%;
+		}
+
+		&:before {
+			$circle-checkmark: 'PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzAgMzMiPjxzdHlsZT4uc3Qwe2ZpbGw6I2Y2YzQ0MztzdHJva2U6I2ViNjEyNjtzdHJva2Utd2lkdGg6Mjt9LnN0MXtmaWxsOiNmZmZ9PC9zdHlsZT48Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSI3LjUiIGN5PSIyNC4xIiByPSI4Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTI4IC42Yy0zIDMuNC01LjkgNi45LTguNSAxMC41cy01LjEgNy4zLTcuMyAxMS4xYy0uMi4zLS40LjctLjYgMS4yLS44IDEuNS0xLjggMi4zLTMuMyAyLjMtLjYgMC0xLjEtLjEtMS41LS4zcy0uNy0uNC0xLjEtLjhjLS4zLS40LS41LS45LS44LTEuNXMtLjUtMS41LS44LTIuN2MwLS4xIDAtLjItLjEtLjMtLjQtMS4zLS41LTIuMS0uNS0yLjQgMC0uNy40LTEuMyAxLjItMS44UzYuMyAxNSA3IDE1Yy4yIDAgLjQuMS42LjJzLjMuNS41LjljLjEuMy4zLjcuNCAxLjIuNCAxLjEuNyAxLjcgMSAxLjcuMiAwIDEuMi0xLjMgMi44LTMuOCAxLjUtMi40IDIuOS00LjUgNC02LjIgMS42LTIuMyAyLjctNCAzLjYtNS4xczEuNS0xLjggMi4yLTIuNGMuNi0uNSAxLjMtLjggMi4yLTEuMXMyLS41IDMuNC0uNWwuMy43eiIvPjwvc3ZnPg==';
+			position: absolute;
+			display: block;
+			left: -7px;
+			top: 50%;
+			margin-top: -10px;
+			content: '';
+			width: 25px;
+			height: 25px;
+			background-size: 22px 22px;
+			background-repeat: no-repeat;
+			background-image: url('data:image/svg+xml;base64,#{$circle-checkmark}');
+		}
+	}
+
+	@media (min-width: $md) {
+		flex-direction: row;
+
+		li {
+			border-left-width: 0;
+			border-top-width: 1px;
+			padding: $gutter-small $gutter $gutter-small 0;
+			margin-top: 15px;
+
+			&:first-child {
+				border-image: none;
+			}
+
+			&:last-child {
+				border-image: none;
+				border-color: $color-transparent;
+			}
+
+			&:before {
+				left: 0%;
+				top: -16px;
+				margin-top: 0;
+			}
+		}
+	}
+}

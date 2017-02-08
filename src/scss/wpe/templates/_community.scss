@@ -1,0 +1,66 @@
+body.page-template-template-community {
+
+	.entry-header {
+		padding-bottom: $gutter;
+	}
+
+	.band-quote {
+		position: relative;
+		border-bottom: 2px solid $brand-primary;
+		margin-bottom: $gutter;
+		min-height: 215px;
+
+		.wrap {
+			padding-bottom: 0;
+		}
+
+		.quote {
+			font: italic 2.4rem/1 $din-regular;
+			max-width: 550px;
+		}
+
+		.caption {
+			font-size: 1.2em;
+		}
+	}
+
+	.events {
+		.block {
+			max-width: 400px;
+		}
+	}
+
+	.consultant {
+		display: inline-block;
+		margin: 0 $gutter-large $gutter 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		img {
+			max-width: 180px;
+			max-height: 66px;
+		}
+	}
+
+	@media (min-width: $sm) {
+		.band-quote {
+			padding-left: #{$gutter + 250};
+
+			.photo {
+				position: absolute;
+				bottom: 0;
+				left: $gutter;
+			}
+		}
+	}
+
+	@media (min-width: $md) {
+		.band-quote {
+			.photo {
+				left: $gutter-large;
+			}
+		}
+	}
+}

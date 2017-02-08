@@ -1,0 +1,274 @@
+
+/**************
+ * Box Layout *
+ **************/
+
+// Set helper classes for margins and paddings
+$gutters: (
+	"small": $gutter_small,
+	"standard": $gutter,
+	"large": $gutter_large,
+	"none": 0
+	);
+
+@each $label, $size in $gutters {
+    .margin-#{$label} {
+        margin: $size;
+    }
+
+    .margin-top-#{$label} {
+        margin-top: $size;
+    }
+
+    .margin-bottom-#{$label} {
+        margin-bottom: $size;
+    }
+
+    .margin-left-#{$label} {
+        margin-left: $size;
+    }
+
+    .margin-right-#{$label} {
+        margin-right: $size;
+    }
+
+    .padding-#{$label} {
+    	padding: $size;
+    }
+
+    .padding-top-#{$label} {
+    	padding-top: $size;
+    }
+
+    .padding-bottom-#{$label} {
+    	padding-bottom: $size;
+    }
+
+    .padding-left-#{$label} {
+    	padding-left: $size;
+    }
+
+    .padding-right-#{$label} {
+    	padding-right: $size;
+    }
+}
+
+// Remove border from current element or from
+// child td and li elements
+.border-none {
+	border: 0;
+
+	td, li {
+		border: 0;
+	}
+}
+
+/***************
+ * Backgrounds *
+ ***************/
+
+.tile-cube-teal {
+	background: url(#{$imagepath}/backgrounds/tile-cube-teal.png) repeat;
+	@extend %font-color-white;
+}
+
+.tile-cube-navy {
+	background: url(#{$imagepath}/backgrounds/tile-cube-navy.png) repeat;
+	@extend %font-color-white;
+}
+
+.tile-cube-aqua {
+	background: url(#{$imagepath}/backgrounds/tile-cube-aqua.png) repeat;
+	@extend %font-color-white;
+}
+
+.tile-cube-celery {
+	background: $green-celery;
+
+	@include qbert-pattern(0.06);
+	@extend %font-color-white;
+}
+
+.tile-origami {
+	background: url(#{$imagepath}/backgrounds/bg-angle-pattern-tiled.jpg) repeat;
+	@extend %font-color;
+}
+
+.tile-cityscape {
+	@extend %font-color;
+	background: $silversand url(#{$imagepath}/backgrounds/cityscape.png) repeat-x left bottom;
+}
+
+.tile-light-arrows {
+	background: $silversand url(#{$imagepath}/backgrounds/tile-light-arrows.png) repeat-x;
+	background-position: bottom left;
+	@extend %font-color;
+}
+
+.tile-chevron-arrows {
+	background: $darkblue url(#{$imagepath}/backgrounds/tile-chevron-arrows.png) repeat-x;
+	background-position: top left;
+	@extend %font-color-white;
+}
+
+.polygon-navy {
+	@extend %font-color-white;
+	background: $darkblue url(#{$imagepath}/backgrounds/polygon-navy.png) repeat;
+}
+
+$background-colors-light: (
+	"clear": "transparent",
+	"silversand": $silversand,
+	"white": $white,
+	"offwhite": $offwhite,
+	"grey": $grey,
+	"gray": $grey,
+	"medgrey": $medgrey,
+	"medgray": $medgrey,
+	"mystic": $mystic,
+	"yellow": $yellow,
+	"pattens-blue": $pattens-blue,
+	"aqua": $aqua,
+	"carmine-pink": $carmine-pink,
+	"coral": $coral,
+	"fringy-flower": $fringy-flower,
+	"solitude": $solitude,
+	"gulf-stream": $gulf-stream,
+	"keppel": $keppel,
+	"super-light": $super-light
+	);
+
+@each $label, $color in $background-colors-light {
+	@include backgroundColor( $label, $color, '%font-color' );
+}
+
+$background-colors-dark: (
+	"teal": $teal,
+	"navy": $darkblue,
+	"darkblue": $darkblue,
+	"ocean": $ocean,
+	"green": $green,
+	"carmine": $carmine-pink
+	);
+
+@each $label, $color in $background-colors-dark {
+	@include backgroundColor( $label, $color, '%font-color-white' );
+}
+
+.background-transparent-white {
+	background-color: rgba( 255, 255, 255, 0.8 );
+}
+
+/***************
+ * Font Styles *
+ ***************/
+
+.required {
+	@include font-color( $red );
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.smaller {
+	font-size: 0.85em;
+}
+
+.bigger, .larger {
+	font-size: 1.25em;
+}
+
+.icon-30 {
+	font-size: 3rem;
+	vertical-align: middle;
+}
+
+.icon-45 {
+	font-size: 4.5rem;
+	vertical-align: middle;
+}
+
+.uppercase, .caption {
+	text-transform: uppercase;
+}
+
+.normalcase {
+	text-transform: none;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.din-ultralight {
+	font-family: $din_ultralight;
+}
+
+.din-light {
+	font-family: $din_light;
+}
+
+.din-medium {
+	font-family: $din_medium;
+}
+
+.din-bold {
+	font-family: $din_bold;
+}
+
+.orange {
+	color: $orange !important;
+
+	&:hover {
+		color: $orange;
+	}
+}
+
+.note {
+	display: block;
+	text-align: right;
+	font-size: 10px;
+	font-style: italic;
+}
+
+.yellow {
+	color: $yellow !important;
+}
+
+.white {
+	color: $white !important;
+
+	em, strong, span {
+		color: $white !important;
+	}
+}
+
+.teal {
+	color: $teal !important;
+}
+
+.green {
+	color: $green !important;
+}
+
+.navy {
+	color: $darkblue !important;
+}
+
+.hit-gray {
+	color: $hit-gray !important;
+}
+
+.callout {
+	font: 3.6rem/1 $din_bold;
+	margin-bottom: 10px;
+}
+
+a.link-underline {
+	text-decoration: underline;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+	}
+}

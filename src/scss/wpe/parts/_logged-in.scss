@@ -1,0 +1,74 @@
+/**
+ * Styles for users who are logged in to the site
+ */
+
+// Style the wpadminbar based on site type
+// We have to use an ID since there aren't any classes on the admin bar
+// sass-lint:disable no-ids
+#wpadminbar {
+	body.developer & {
+		background-color: $color-pelorous;
+	}
+
+	body.devsite & {
+		background-color: $color-gable;
+	}
+
+	body.staging & {
+		background-color: $brand-success;
+	}
+
+	body.production & {
+		background-color: $brand-danger;
+	}
+}
+// sass-lint:enable no-ids
+
+
+.inline-block {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.col {
+	float: left;
+	padding-right: 3%;
+}
+
+.cmb-row.col-one-half {
+	width: 48%;
+}
+
+.cmb-row.col-one-third {
+	width: 31%;
+}
+.cmb-row.tall {
+	min-height: 110px;
+}
+
+.cmb-row.col-two-thirds {
+	width: 63%;
+}
+
+.last {
+	padding-right: 0;
+}
+
+.cmb-row.no-border {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.cmb2-wrap .cmb-td {
+	position: relative;
+
+	textarea {
+		width: 475px;
+	}
+
+	.button.wysiwyg-editor {
+		position: absolute;
+		top: 50px;
+		left: 405px;
+	}
+}

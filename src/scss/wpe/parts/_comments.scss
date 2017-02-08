@@ -1,0 +1,89 @@
+.entry-comments {
+	@extend %layout-container-padding;
+
+	margin-bottom: $gutter-large;
+
+	h3 {
+		@extend %entry-title;
+		@extend %clearfix;
+	}
+
+	.children {
+		margin-left: $gutter;
+	}
+}
+
+.comment-list {
+	clear: both;
+}
+
+.comment {
+
+	.avatar {
+		margin: 0 $gutter-small 0 0;
+	}
+
+	article {
+		@extend %gray-1-box;
+
+		a {
+			@extend %link-underline;
+			color: $text-color;
+
+			&.comment-time-link {
+				@extend %no-link-underline;
+			}
+
+			&.comment-reply-link {
+				color: $brand-primary;
+			}
+		}
+
+		.says {
+			display: none;
+		}
+	}
+}
+
+.comment-header {
+	@include flex( row, nowrap );
+
+	p {
+		margin-right: $gutter-small;
+	}
+}
+
+.comment-author {
+	font-weight: 600;
+}
+
+.comment-respond {
+	@extend %layout-container-padding;
+}
+
+.comment-reply-title {
+	@extend %entry-title;
+	@extend %clearfix;
+}
+
+.comment-form {
+	clear: both;
+}
+
+.logged-in-as {
+	a {
+		color: $text-color;
+	}
+}
+
+.comment-notes {
+	display: none;
+}
+
+.comment-form-comment {
+	label:after {
+		display: inline;
+		content: " *";
+		color: $color-error;
+	}
+}

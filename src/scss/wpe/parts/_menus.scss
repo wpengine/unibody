@@ -1,0 +1,300 @@
+.site-header {
+	.menu {
+		@include flex( row, nowrap );
+		justify-content: space-between;
+		font-family: $din-regular;
+		line-height: 1;
+	}
+
+	.menu-item {
+		white-space: nowrap;
+	}
+}
+
+.nav-primary {
+	font-size: $font-size-smaller;
+	height: 34px;
+
+	.wrap, .menu {
+		height: 100%;
+	}
+
+	.menu-item {
+		a {
+			display: block;
+			height: 100%;
+			padding: 11px 8px 9px; // We do 11 on top and 9 on bottom because the Din font doesn't have a good line height
+			background-color: $color-grayscale-1;
+			color: $brand-primary;
+			transition: none;
+
+			&:hover, &:focus {
+				background-color: $brand-primary;
+				color: $color-white;
+				text-decoration: none;
+			}
+		}
+
+		&.current-menu-item {
+			a {
+				background-color: $color-pelorous;
+				cursor: default;
+
+				&, &:hover, &:focus {
+					background-color: $color-pelorous;
+					color: $color-white;
+				}
+			}
+		}
+
+		// Display only the first three links in mobile
+		&:nth-child(n+4) {
+			display: none;
+		}
+
+		&:nth-child(1) {
+			@include corners( true, false, false, false );
+		}
+
+		&:nth-child(2) {
+			@include corners( false, false, true, true );
+		}
+
+		&:nth-child(3) {
+			@include corners( true, true, false, false );
+		}
+
+		&:nth-child(4) {
+			@include corners( true, false, false, true );
+		}
+
+		&:nth-child(5) {
+			@include corners( false, true, false, false );
+		}
+
+		&:nth-child(6) {
+			@include corners( false, true, true, false );
+		}
+
+		// Search icon
+		&:nth-child(7) {
+			@extend %fontawesome;
+			padding: 0 10px;
+			font-size: 2.4rem;
+			line-height: 30px;
+
+			a {
+				background: none;
+				color: $color-grayscale-5;
+				padding: 0;
+
+				&:after {
+					display: block;
+					text-indent: 0;
+					content: '\f002';
+				}
+
+				&.active, &:hover, &:focus {
+					background: none;
+					color: $brand-primary;
+				}
+			}
+
+			span {
+				position: absolute;
+				left: -999em;
+			}
+		}
+	}
+}
+
+.nav-user {
+	display: none;
+	margin-bottom: $gutter-small;
+	padding-left: 15px;
+
+	.menu-item {
+		margin-right: $gutter-small;
+	}
+
+	.phone {
+
+		&:before {
+			display: inline;
+			content: 'Sales: ';
+		}
+
+		a {
+			color: $brand-primary;
+
+			&:hover {
+				color: $brand-primary;
+			}
+
+			&:before {
+				background-color: $brand-primary;
+			}
+		}
+	}
+}
+
+.nav-mobile {
+	margin-top: $gutter-small;
+
+	.menu {
+		justify-content: space-around;
+	}
+}
+
+.nav-user, .nav-mobile {
+	width: 100%;
+	font-size: $font-size-smaller;
+
+	a {
+		position: relative;
+		padding-bottom: $gutter-tiny;
+		text-decoration: none;
+		color: $text-color;
+
+		&:hover {
+			color: $text-color;
+			text-decoration: none;
+		}
+
+		&:before {
+			@extend %transition;
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background-color: $text-color;
+			text-decoration: none;
+			visibility: hidden;
+			transform: scaleX(0);
+		}
+
+		&:hover, &.active {
+			&:before {
+				visibility: visible;
+				transform: scaleX(1);
+			}
+		}
+	}
+
+	.current-menu-item {
+		a:before {
+			visibility: visible;
+			transform: scaleX(1);
+		}
+	}
+}
+
+.nav-submenu {
+	@extend %page-width;
+	background: $color-pelorous;
+	text-transform: uppercase;
+
+	ul {
+		@extend %layout-container-padding-large;
+	}
+
+	li {
+		border: solid $color-pelorous;
+		border-width: 2px 1px;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: $color-white;
+			padding: 13px;
+
+			&:hover {
+				background: $color-white;
+				color: $color-pelorous;
+			}
+		}
+
+		&.current-menu-item {
+			a {
+				background-color: $color-white;
+				color: $color-pelorous;
+			}
+		}
+	}
+
+	.menu-title {
+		font: 2rem/42px $din-regular;
+		color: $color-white;
+		margin-right: $gutter-small;
+
+		a {
+			color: $color-white;
+		}
+	}
+}
+
+
+@media (min-width: 350px) {
+	.nav-primary {
+		.menu-item {
+			a {
+				padding-left: 12px;
+				padding-right: 12px;
+			}
+		}
+	}
+}
+
+
+@media (min-width: $sm) {
+	.site-header {
+		.menu {
+			justify-content: flex-start;
+		}
+	}
+
+	.nav-primary {
+		font-size: $font-size;
+
+		.menu-item {
+			margin-right: $gutter-tiny;
+			background-color: $color-transparent;
+
+			a {
+				background-color: $color-transparent;
+				color: $heading-color;
+
+				&:hover, &:focus {
+					background-color: $color-grayscale-2;
+					color: $brand-primary;
+				}
+			}
+
+			// Display all the links (not just the first three)
+			&:nth-child(n+4) {
+				display: inline-block;
+			}
+		}
+	}
+
+	.nav-user {
+		display: block;
+	}
+
+	.nav-mobile {
+		display: none;
+	}
+}
+
+@media (min-width: $md) {
+	.nav-primary {
+		.menu-item {
+			a {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	}
+}

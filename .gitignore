@@ -1,1 +1,16 @@
+# Dependencies
 node_modules
+
+# Build assets
+build
+.publish
+vendor
+
+# Public assets
+public/css/style.css
+public/img/svg-icons
+
+# Other
+.log
+.DS_Store
+Thumbnails.db
