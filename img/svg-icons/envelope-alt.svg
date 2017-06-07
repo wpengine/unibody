@@ -1,1 +1,1 @@
-<svg id="envelope-alt" xmlns="http://www.w3.org/2000/svg" width="54.2" height="54.2" viewBox="0 0 54.2 54.2"><title>envelope-alt</title><polygon points="52.2 52.2 1.9 52.2 1.9 2.4 27.2 26.1 52.1 2.9 52.2 23.3 54.2 23.3 54.1 0 30.1 0 30.1 1.9 50.3 1.9 27.2 23.5 4.2 1.9 26.6 1.9 26.6 0 0 0 0 54.2 54.2 54.2 54.2 27.2 52.2 27.2 52.2 52.2"  /></svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="envelope-alt" viewBox="0 0 54.2 54.2"><path d="M52.2 52.2H1.9V2.4l25.3 23.7L52.1 2.9l.1 20.4h2L54.1 0h-24v1.9h20.2L27.2 23.5 4.2 1.9h22.4V0H0v54.2h54.2v-27h-2v25z"/></svg>

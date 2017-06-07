@@ -5370,7 +5370,7 @@ select.selectpicker {
  *
  * @return {css}                 Background image with cut-out colors
  */
-.page-width, .site-footer-lower, body.content-sidebar .content-sidebar-wrap, body.category-customer-spotlight .content-sidebar-wrap, body.blog .content-sidebar-wrap, body.full-width-content .content-sidebar-wrap, body.blog .subscribe-form .wrap, body.blog .blog-post-loop .wrap, .cookie-bar .wrap, .site-footer, .site-header .search-form, .site-header .search-form .wrap, .promo-bar .cta > *, .nav-submenu, .support-login, .content-band, body.archive .content-sidebar-wrap, body.category-customer-spotlight .site-inner, body.page-template-template-enterprise-c .performance-matters, body.single-our-difference .hero-block {
+.page-width, .site-footer-lower, body.content-sidebar .content-sidebar-wrap, body.category-customer-spotlight .content-sidebar-wrap, body.blog .content-sidebar-wrap, body.full-width-content .content-sidebar-wrap, body.blog .subscribe-form .wrap, body.blog .blog-post-loop .wrap, .cookie-bar .wrap, .site-footer, .promo-bar .cta > *, .nav-submenu, .support-login, .content-band, body.archive .content-sidebar-wrap, body.category-customer-spotlight .site-inner, body.page-template-template-enterprise-c .performance-matters, body.single-our-difference .hero-block {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto; }
@@ -5475,9 +5475,9 @@ body.archive .entry-thumbnail, body.category-customer-spotlight .blog-post-loop 
 .clearfix:after, .entry-header:after, .entry-comments h3:after, .entry-comments .site-footer .footer-column-header:after, .site-footer .entry-comments .footer-column-header:after, .comment-reply-title:after, .site-footer-lower:after, .content-band > .wrap:after, body.page-template-template-contact .widget .section:after, body.blog .blog-post-loop:after {
   clear: both; }
 
-.entry-content a, .comment article a, .site-header .autocomplete-container a, .hero-text a, .wpe-modal .close a, .widget a, .plan-table .cell.plan .price a, .readmore, body.archive.post-type-archive-support .block li a, body.archive.post-type-archive-support .entry li a, .entry-content a a, .comment article a a, .site-header .autocomplete-container a a, .hero-text a a, .wpe-modal .close a a, .widget a a, .plan-table .cell.plan .price a a, .readmore a, body.archive.post-type-archive-support .block li a a, body.archive.post-type-archive-support .entry li a a {
+.entry-content a, .comment article a, .hero-text a, .wpe-modal .close a, .widget a, .plan-table .cell.plan .price a, .readmore, body.archive.post-type-archive-support .block li a, body.archive.post-type-archive-support .entry li a, .entry-content a a, .comment article a a, .hero-text a a, .wpe-modal .close a a, .widget a a, .plan-table .cell.plan .price a a, .readmore a, body.archive.post-type-archive-support .block li a a, body.archive.post-type-archive-support .entry li a a {
   text-decoration: underline; }
-  .entry-content a:hover, .comment article a:hover, .site-header .autocomplete-container a:hover, .hero-text a:hover, .wpe-modal .close a:hover, .widget a:hover, .plan-table .cell.plan .price a:hover, .readmore:hover, body.archive.post-type-archive-support .block li a:hover, body.archive.post-type-archive-support .entry li a:hover, .entry-content a a:hover, .comment article a a:hover, .site-header .autocomplete-container a a:hover, .hero-text a a:hover, .wpe-modal .close a a:hover, .widget a a:hover, .plan-table .cell.plan .price a a:hover, .readmore a:hover, body.archive.post-type-archive-support .block li a a:hover, body.archive.post-type-archive-support .entry li a a:hover, .entry-content a a:hover, .comment article a a:hover, .site-header .autocomplete-container a a:hover, .hero-text a a:hover, .wpe-modal .close a a:hover, .widget a a:hover, .plan-table .cell.plan .price a a:hover, .readmore a:hover, body.archive.post-type-archive-support .block li a a:hover, body.archive.post-type-archive-support .entry li a a:hover, .entry-content a a a:hover, .comment article a a a:hover, .site-header .autocomplete-container a a a:hover, .hero-text a a a:hover, .wpe-modal .close a a a:hover, .widget a a a:hover, .plan-table .cell.plan .price a a a:hover, .readmore a a:hover, body.archive.post-type-archive-support .block li a a a:hover, body.archive.post-type-archive-support .entry li a a a:hover {
+  .entry-content a:hover, .comment article a:hover, .hero-text a:hover, .wpe-modal .close a:hover, .widget a:hover, .plan-table .cell.plan .price a:hover, .readmore:hover, body.archive.post-type-archive-support .block li a:hover, body.archive.post-type-archive-support .entry li a:hover, .entry-content a a:hover, .comment article a a:hover, .hero-text a a:hover, .wpe-modal .close a a:hover, .widget a a:hover, .plan-table .cell.plan .price a a:hover, .readmore a:hover, body.archive.post-type-archive-support .block li a a:hover, body.archive.post-type-archive-support .entry li a a:hover, .entry-content a a:hover, .comment article a a:hover, .hero-text a a:hover, .wpe-modal .close a a:hover, .widget a a:hover, .plan-table .cell.plan .price a a:hover, .readmore a:hover, body.archive.post-type-archive-support .block li a a:hover, body.archive.post-type-archive-support .entry li a a:hover, .entry-content a a a:hover, .comment article a a a:hover, .hero-text a a a:hover, .wpe-modal .close a a a:hover, .widget a a a:hover, .plan-table .cell.plan .price a a a:hover, .readmore a a:hover, body.archive.post-type-archive-support .block li a a a:hover, body.archive.post-type-archive-support .entry li a a a:hover {
     text-decoration: none; }
 
 a, .entry-header .entry-title a, .entry-comments h3 a, .entry-comments .site-footer .footer-column-header a, .site-footer .entry-comments .footer-column-header a, .comment-reply-title a, .support-login .call h3 a, .support-login .call .site-footer .footer-column-header a, .site-footer .support-login .call .footer-column-header a, .entry-header .entry-meta a, .post-navigation a, .comment article a.comment-time-link, .site-footer a, .widget-tagged-posts li a, .status-bar a, body.post-type-archive-testimonials .entry-footer .website, body.page-template-template-contact .widget-support-meta a, body.page-template-template-support-browse .content-sidebar-wrap a, a a, .entry-header .entry-title a a, .entry-comments h3 a a, .entry-comments .site-footer .footer-column-header a a, .site-footer .entry-comments .footer-column-header a a, .comment-reply-title a a, .support-login .call h3 a a, .support-login .call .site-footer .footer-column-header a a, .site-footer .support-login .call .footer-column-header a a, .entry-header .entry-meta a a, .post-navigation a a, .comment article a.comment-time-link a, .site-footer a a, .widget-tagged-posts li a a, .status-bar a a, body.post-type-archive-testimonials .entry-footer .website a, body.page-template-template-contact .widget-support-meta a a, body.page-template-template-support-browse .content-sidebar-wrap a a {
@@ -5499,7 +5499,7 @@ input[type="submit"].cta-link:before, .wpe-form input[type='email'],
 .wpe-form.white input[type='url'], .wpe-form.white textarea, .nav-user a:before, .nav-mobile a:before {
   transition: all 0.1s cubic-bezier(0.42, 0, 0.58, 1) 0s; }
 
-.entry-header .share-btns a, .site-header .search-form .wrap:before, ul.checkmarks li:before, .nav-primary .menu-item:nth-child(7), .widget-quick-tips h3:before, .widget-quick-tips .site-footer .footer-column-header:before, .site-footer .widget-quick-tips .footer-column-header:before, .plan-table .cell.checked:after {
+.entry-header .share-btns a, ul.checkmarks li:before, .nav-primary .menu-item:nth-child(7), .widget-quick-tips h3:before, .widget-quick-tips .site-footer .footer-column-header:before, .site-footer .widget-quick-tips .footer-column-header:before, .plan-table .cell.checked:after {
   display: inline-block;
   font-family: FontAwesome;
   font-weight: normal;
@@ -7453,111 +7453,6 @@ input[type="checkbox"], input[type="image"], input[type="radio"] {
   padding: 4px; }
   .gallery img:hover, .gallery img:focus {
     border: 1px solid #999; }
-
-.site-header .title-area {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  height: 30px;
-  margin-bottom: 20px; }
-
-.site-header .site-title {
-  flex: 1 1 50%;
-  height: 100%;
-  text-indent: -9999px;
-  margin-right: 20px; }
-  .site-header .site-title * {
-    width: 100%;
-    height: 100%; }
-  .site-header .site-title a {
-    display: block;
-    background: url(../images/WPE-logo.svg) no-repeat; }
-
-.site-header .sales-number {
-  flex: 1 1 50%;
-  color: #162A33;
-  font-size: 1.4rem;
-  margin: 0; }
-  .site-header .sales-number a {
-    display: block;
-    color: #EB6126; }
-
-.site-header .autocomplete-container {
-  position: absolute;
-  top: 100%;
-  padding: 0 40px 0 80px; }
-  .site-header .autocomplete-container a {
-    color: #FFFFFF; }
-
-.site-header .header-content {
-  max-width: 400px;
-  padding: 20px;
-  text-transform: uppercase; }
-
-.site-header .menus {
-  max-width: 330px; }
-
-.site-header .search-form {
-  position: relative;
-  display: none;
-  margin: 0 auto;
-  float: none;
-  width: 100%;
-  background-color: #162A33;
-  color: #E8E8E8;
-  font-size: 1.8rem; }
-  .site-header .search-form .wrap {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    padding: 0 40px; }
-    .site-header .search-form .wrap:before {
-      flex: 0 0 40px;
-      content: '\f002'; }
-  .site-header .search-form input {
-    flex: 1 1 100%;
-    background-color: transparent;
-    border: 0;
-    color: #FFFFFF;
-    clip-path: none; }
-
-@media (min-width: 375px) {
-  .site-header .sales-number a {
-    display: inline; } }
-
-@media (min-width: 768px) {
-  .site-header .header-content {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 40px; }
-  .site-header .menus {
-    max-width: initial; }
-  .site-header .title-area {
-    margin-bottom: 0;
-    width: 72px;
-    height: 97px;
-    margin-right: 20px; }
-  .site-header .site-title {
-    height: 100%;
-    margin-right: 0; }
-    .site-header .site-title a {
-      background-image: url(../images/WPE-logo-stacked.svg);
-      width: 100%;
-      height: 100%; }
-  .site-header .sales-number {
-    display: none; } }
-
-@media (min-width: 940px) {
-  .site-header .header-content {
-    padding: 40px 80px; }
-  .site-header .search-form .wrap {
-    padding: 0 95px; }
-  .site-header .search-form .autocomplete-container {
-    padding: 0 80px 0 135px; } }
 
 .promo-bar {
   color: #FFFFFF;

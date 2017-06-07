@@ -1,1 +1,1 @@
-<svg id="shield-sash" xmlns="http://www.w3.org/2000/svg" width="59.2" height="59.8" viewBox="0 0 59.2 59.8"><title>shield-sash</title><path d="M0,0V35.2L29.6,59.8,59.2,35.2V0H0ZM57.2,13.1L10,40.9l-7.3-6L57.2,2.8V13.1h0ZM54.5,2L2,33V2H54.5ZM29.6,57.2l-18-14.9L57.2,15.4V34.3Z" transform="translate(0 0)"  /></svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="shield-sash" viewBox="0 0 59.2 59.8"><path d="M0 0v35.2l29.6 24.6 29.6-24.6V0H0zm57.2 13.1L10 40.9l-7.3-6L57.2 2.8v10.3zM54.5 2L2 33V2h52.5zM29.6 57.2l-18-14.9 45.6-26.9v18.9z"/></svg>
