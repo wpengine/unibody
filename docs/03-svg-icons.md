@@ -278,6 +278,10 @@ title: Icons
 			<span class="wpe-icon-name">rocket</span>
 		</li>
 		<li>
+			<img class="wpe-icon" src="{{ path '/img/svg-icons/rocket-hollow.svg' }}" />
+			<span class="wpe-icon-name">rocket-hollow</span>
+		</li>
+		<li>
 			<img class="wpe-icon" src="{{ path '/img/svg-icons/scale.svg' }}" />
 			<span class="wpe-icon-name">scale</span>
 		</li>
