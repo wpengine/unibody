@@ -48,7 +48,7 @@ gulp.task('get-svg-icons', function() {
 });
 
 gulp.task('svg2png', function () {
-	gulp.src('./vendor/wpengine-svg-icons/dist/svg/*.svg')
+	gulp.src('./vendor/wpengine-svg-icons/dist/svg/**/*.svg')
 		.pipe(svg2png())
 		.pipe(gulp.dest('./public/img/png-icons'));
 });
