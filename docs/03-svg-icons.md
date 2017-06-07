@@ -62,6 +62,10 @@ title: Icons
 			<span class="wpe-icon-name">book-open</span>
 		</li>
 		<li>
+			<img class="wpe-icon" src="{{ path '/img/svg-icons/brisbane.svg' }}" />
+			<span class="wpe-icon-name">brisbane</span>
+		</li>
+		<li>
 			<img class="wpe-icon" src="{{ path '/img/svg-icons/building.svg' }}" />
 			<span class="wpe-icon-name">building</span>
 		</li>
@@ -186,6 +190,10 @@ title: Icons
 			<span class="wpe-icon-name">golden-gate</span>
 		</li>
 		<li>
+			<img class="wpe-icon" src="{{ path '/img/svg-icons/guarantee.svg' }}" />
+			<span class="wpe-icon-name">guarantee</span>
+		</li>
+		<li>
 			<img class="wpe-icon" src="{{ path '/img/svg-icons/house-alt.svg' }}" />
 			<span class="wpe-icon-name">house-alt</span>
 		</li>
@@ -208,6 +216,14 @@ title: Icons
 		<li>
 			<img class="wpe-icon" src="{{ path '/img/svg-icons/led.svg' }}" />
 			<span class="wpe-icon-name">led</span>
+		</li>
+		<li>
+			<img class="wpe-icon" src="{{ path '/img/svg-icons/logomark-cp.svg' }}" />
+			<span class="wpe-icon-name">logomark-cp</span>
+		</li>
+		<li>
+			<img class="wpe-icon" src="{{ path '/img/svg-icons/logomark-pp.svg' }}" />
+			<span class="wpe-icon-name">logomark-pp</span>
 		</li>
 		<li>
 			<img class="wpe-icon" src="{{ path '/img/svg-icons/malicious.svg' }}" />

@@ -43,12 +43,12 @@ gulp.task('get-svg-icons', function() {
 	git.clone('git@github.com:wpengine/wpengine-svg-icons.git', {args: './vendor/wpengine-svg-icons'}, function(err) {
 		// handle err
 	});
-	gulp.src("vendor/wpengine-svg-icons/assets/svg/*.svg")
+	gulp.src('./vendor/wpengine-svg-icons/dist/svg/*.svg')
 			.pipe(gulp.dest('./public/img/svg-icons'));
 });
 
 gulp.task('svg2png', function () {
-	gulp.src('./vendor/wpengine-svg-icons/*.svg')
+	gulp.src('./vendor/wpengine-svg-icons/dist/svg/*.svg')
 		.pipe(svg2png())
 		.pipe(gulp.dest('./public/img/png-icons'));
 });
@@ -56,5 +56,6 @@ gulp.task('svg2png', function () {
 //
 // Gulp sequential tasks
 //
-gulp.task('serve', ['sass', 'get-svg-icons', 'watch']);
+gulp.task('svg', ['get-svg-icons', 'svg2png']);
+gulp.task('serve', ['sass', 'watch']);
 gulp.task('deploy', ['sass', 'build', 'gh-pages']);
