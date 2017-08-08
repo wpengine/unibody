@@ -1,0 +1,126 @@
+<!-- CSS
+=============================================================================================== -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Montserrat');
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.gridcontainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+}
+.swatch {
+  margin: 20px 10px 0;
+  text-transform: uppercase;
+  text-align: center;
+  
+  &:nth-of-type(6n+1) {
+    margin-left: 20px;
+  }
+  &:nth-of-type(6n) {
+    margin-right: 20px;
+  }
+}
+.swatch__key,
+.swatch__value {
+  display: block;
+}
+
+.swatch__key {
+  background-color: #f0f0f0;
+  margin-top: 5px;
+  padding: 3px;
+  border-radius: 6px;
+  font-size: .8em;
+  color: #666;
+  font-family: 'Inconsolata', monospace;
+}
+
+.swatch__value {
+  background-color: #333;
+  color: #fff;
+  border-radius: 6px;
+  padding: 30px 20px;
+}
+</style>
+
+<!-- MARKUP
+=============================================================================================== -->
+<div class="gridcontainer">
+  
+  <div class="swatch">
+    <div class="swatch__value">#40bac8</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#162a33</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#eb6126</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#f6c443</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#72c5a1</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#de8073</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#9e859e</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#8cd6de</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#4a82ba</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#abc261</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#738085</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+  <div class="swatch">
+    <div class="swatch__value">#a0a3a5</div>
+    <div class="swatch__key">$color-flamingo</div>
+  </div>
+  
+</div>
+
+<!-- JAVASCRIPT
+=============================================================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$('.swatch__value').each(function(){
+  var value = $(this).text();
+  
+  $(this).css("background", value);
+});
+</script>

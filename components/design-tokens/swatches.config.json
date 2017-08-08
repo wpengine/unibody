@@ -1,0 +1,10 @@
+{
+  "title": "WP Engine Brand Colors",
+  "label": "Swatches",
+  "status": "prototype",
+  "notes": "test",
+  "context": {       
+    "button__text": "Default Button",
+    "button__link": "https://wpengine.com/plans"
+  }
+}

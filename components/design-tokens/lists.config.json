@@ -1,0 +1,10 @@
+{
+  "title": "Lists",
+  "label": "Lists",
+  "status": "prototype",
+  "notes": "",
+  "context": {       
+    "button__text": "Default Button",
+    "button__link": "https://wpengine.com/plans"
+  }
+}
