@@ -1,0 +1,110 @@
+/**
+ * Core WP Engine Styles
+ * for the UI / UX brand
+ *
+ * The UI / UX kit follows the BEM naming convention
+ * @link http://getbem.com/naming/
+ */
+/**
+ * Variables for the WP Engine UI / UX kit
+ */
+/**
+ * Convert angle
+ *
+ * @author Chris Eppstein
+ * @param {Number} $value - Value to convert
+ * @param {String} $unit - Unit to convert to
+ * @return {Number} Converted angle
+ */
+/**
+ * Test if `$value` is an angle
+ *
+ * @param {*} $value - Value to test
+ * @return {Bool}
+ */
+/**
+ * Convert a direction to legacy syntax
+ *
+ * @param {Keyword | Angle} $value - Value to convert
+ * @require {function} is-direction
+ * @require {function} convert-angle
+ * @return {Mixed} Angle value or legacy keyword value
+ */
+/**
+ * Mixin printing a linear-gradient
+ * as well as a plain color fallback
+ * and the `-webkit-` prefixed declaration
+ *
+ * @example `@include linear-gradient(#31B7D7, #EDAC7D);`
+ * @example `@include linear-gradient(to bottom, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);`
+ * @example `@include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%);`
+ *
+ * @access public
+ * @param {String | List | Angle} $direction - Linear gradient direction
+ * @param {Arglist} $color-stops - List of color-stops composing the gradient
+ */
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.375;
+  color: #121B24; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 700; }
+
+h1 {
+  font-size: 4.5rem;
+  line-height: 1.111; }
+
+h2 {
+  font-size: 2.75rem;
+  line-height: 1.363; }
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.375; }
+
+h4 {
+  font-size: 1.3125rem;
+  line-height: 1.375; }
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.375; }
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.375; }
+
+a {
+  color: #0ECAD4; }
+
+pre,
+code {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; }
+
+/**
+ * List styles
+ */
+ul, ol {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 1rem; }
+  ul > li::before, ol > li::before {
+    padding-right: 5px; }
+
+ul > li::before {
+  content: '\x025B8'; }
+
+ol {
+  counter-reset: li; }
+  ol > li::before {
+    content: counter(li) ")";
+    counter-increment: li; }

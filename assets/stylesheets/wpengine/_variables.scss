@@ -1,0 +1,87 @@
+// Color Palette
+$color--primary-1: #0ECAD4 !default;
+$color--primary-2: #121B24 !default;
+$color--primary-3: #FF6C29 !default;
+$color--secondary-1: #50E3C2 !default;
+$color--secondary-2: #21CED7 !default;
+$color--secondary-3: #2CCDEC !default;
+$color--secondary-4: #389FF0 !default;
+$color--secondary-5: #007EEA !default;
+$color--secondary-6: #5D67F0 !default;
+
+$color--white: #FFFFFF !default;
+$color--black: #000000 !default;
+$color--gray-light: #F1F1F1 !default;
+$color--gray-med: darken( $color--gray-light, 30% ) !default;
+$color--gray-dark: darken( $color--gray-med, 30% ) !default;
+
+$colors--primary: (
+    $color--primary-1,
+    $color--primary-2,
+    $color--primary-3
+    );
+
+$colors--secondary: (
+    $color--secondary-1,
+    $color--secondary-2,
+    $color--secondary-3,
+    $color--secondary-4,
+    $color--secondary-5,
+    $color--secondary-6
+    );
+
+$colors--grayscale: (
+    $color--white,
+    $color--gray-light,
+    $color--gray-med,
+    $color--gray-dark,
+    $color--black
+    );
+
+// Font settings
+$font--family: "Open Sans", Arial, sans-serif !default;
+$font--family-heading: $font--family;
+$font--family-code: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+
+$font--size-body:  16px !default;
+
+$font--size:       1rem !default;
+$font--size-large: $font--size * 1.5;
+$font--size-h1:    4.5rem !default;
+$font--size-h2:    2.75rem !default;
+$font--size-h3:    1.5rem !default;
+$font--size-h4:    1.3125rem !default;
+$font--size-h5:    $font--size !default;
+$font--size-h6:    $font--size !default;
+
+$font--weight:     300 !default;
+$font--weight-light:      100 !default;
+$font--weight-bold:       400 !default;
+$font--weight-extra-bold: 700 !default;
+$font--weight-heading:    $font--weight-extra-bold !default;
+
+$font--line-height:    1.375 !default;
+$font--line-height-h1: 1.111 !default;
+$font--line-height-h2: 1.363 !default;
+$font--line-height-h3: $font--line-height !default;
+$font--line-height-h4: $font--line-height !default;
+$font--line-height-h5: $font--line-height !default;
+$font--line-height-h6: $font--line-height !default;
+
+$font--color: $color--primary-2;
+$font--color-link: $color--primary-1;
+
+// Spacers
+$spacer: 20px !default;
+$spacer--0: 0;
+$spacer--1: $spacer * 0.25;
+$spacer--2: $spacer * 0.5;
+$spacer--3: $spacer;
+$spacer--4: $spacer * 2;
+$spacer--5: $spacer * 3;
+
+// Container breakpoints
+$breakpoint--sm: 540px !default;
+$breakpoint--md: 720px !default;
+$breakpoint--lg: 960px !default;
+$breakpoint--xl: 1140px !default;
