@@ -15,6 +15,8 @@ $color__gray-light: #F1F1F1 !default;
 $color__gray-med: darken( $color__gray-light, 30% ) !default;
 $color__gray-dark: darken( $color__gray-med, 30% ) !default;
 
+$color__transparent: transparent !default;
+
 $colors__primary: (
     $color__primary-1,
     $color__primary-2,
@@ -40,7 +42,6 @@ $colors__grayscale: (
 
 // Font settings
 $font__family: "Open Sans", Arial, sans-serif !default;
-$font__family-heading: $font__family;
 $font__family-code: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
 $font__size-body:  16px !default;
@@ -54,9 +55,9 @@ $font__size-h4:    1.3125rem !default;
 $font__size-h5:    $font__size !default;
 $font__size-h6:    $font__size !default;
 
-$font__weight:     300 !default;
+$font__weight:            400 !default;
 $font__weight-light:      100 !default;
-$font__weight-bold:       400 !default;
+$font__weight-bold:       600 !default;
 $font__weight-extra-bold: 700 !default;
 $font__weight-heading:    $font__weight-extra-bold !default;
 
@@ -79,6 +80,7 @@ $spacer__2: $spacer * 0.5;
 $spacer__3: $spacer;
 $spacer__4: $spacer * 2;
 $spacer__5: $spacer * 3;
+$spacer__border: 2px;
 
 // Container breakpoints
 $breakpoint__sm: 540px !default;

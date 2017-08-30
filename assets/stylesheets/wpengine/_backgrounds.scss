@@ -1,8 +1,8 @@
-%background__gradient-1 {
+%background__subzero {
     @include linear-gradient( $color__secondary-4, $color__secondary-2 );
 }
 
-%background__gradient-2 {
+%background__nightwolf {
     @include linear-gradient( $color__secondary-3, $color__secondary-6 );
 }
 

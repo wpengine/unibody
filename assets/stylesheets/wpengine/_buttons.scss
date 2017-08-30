@@ -1,0 +1,65 @@
+// Generate a button style
+//
+// @param {String} $name             The name of the button modifier.
+// @param {String} $color_background Optional. The background color for the button.
+// @param {String} $color_font       Optional. The font color of the button.
+// @param {String} $color_border     Optional. The border color of the button.
+// @param {String} $color_font_hover Optional. The color of the font's hover/active state
+@mixin button_generator( $name, $color_background: $color__primary-1, $color_font: $color__primary-2, $color_border: null, $color_font_hover: null ) {
+
+    @if not $name {
+        @error "button_generator: Missing name parameter";
+    }
+
+    @if not $color_border {
+        $color_border: $color_background;
+    }
+
+    $color_background_hover: $color__transparent;
+
+    @if $color__transparent == $color_background {
+        $color_background_hover: $color_border;
+    }
+
+    %button--#{$name} {
+        background-color: $color_background;
+        border-color: $color_border;
+        color: $color_font;
+
+        &:hover, &:focus, &.active {
+            background-color: $color_background_hover;
+
+            @if null != $color_font_hover {
+                color: $color_font_hover;
+            }
+        }
+    }
+
+    .button--#{$name} {
+        @extend %button--#{$name};
+    }
+}
+
+%button {
+    padding: $spacer__3 $spacer__4;
+    border-width: $spacer__border;
+    font-weight: $font__weight-bold;
+    line-height: 1;
+}
+
+button, .button {
+    @extend %button;
+}
+
+$buttons: (
+    primary-light: ($color__primary-1, $color__primary-2),
+    primary-dark:  ($color__primary-1, $color__white),
+    secondary-light: ($color__transparent, $color__primary-2, $color__primary-2, $color__white),
+    secondary-dark: ($color__transparent, $color__white, $color__white, $color__primary-2),
+    cta-light: ($color__primary-3, $color__primary-2),
+    cta-dark: ($color__primary-3, $color__white)
+    ) !default;
+
+@each $name, $colors in $buttons {
+    @include button_generator( $name, $colors... );
+}
