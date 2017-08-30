@@ -1,9 +1,9 @@
 body {
-    font-family: $font--family;
-    font-size: $font--size-body;
-    font-weight: $font--weight;
-    line-height: $font--line-height;
-    color: $font--color;
+    font-family: $font__family;
+    font-size: $font__size-body;
+    font-weight: $font__weight;
+    line-height: $font__line-height;
+    color: $font__color;
 }
 
 // Headings
@@ -13,52 +13,52 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font--family-heading;
-    font-weight: $font--weight-heading;
+    font-family: $font__family-heading;
+    font-weight: $font__weight-heading;
 }
 
 h1 {
-    font-size: $font--size-h1;
-    line-height: $font--line-height-h1;
+    font-size: $font__size-h1;
+    line-height: $font__line-height-h1;
 }
 
 h2 {
-    font-size: $font--size-h2;
-    line-height: $font--line-height-h2;
+    font-size: $font__size-h2;
+    line-height: $font__line-height-h2;
 }
 
 h3 {
-    font-size: $font--size-h3;
-    line-height: $font--line-height-h3;
+    font-size: $font__size-h3;
+    line-height: $font__line-height-h3;
 }
 
 h4 {
-    font-size: $font--size-h4;
-    line-height: $font--line-height-h4;
+    font-size: $font__size-h4;
+    line-height: $font__line-height-h4;
 }
 
 h5 {
-    font-size: $font--size-h5;
-    line-height: $font--line-height-h5;
+    font-size: $font__size-h5;
+    line-height: $font__line-height-h5;
 }
 
 h6 {
-    font-size: $font--size-h6;
-    line-height: $font--line-height-h6;
+    font-size: $font__size-h6;
+    line-height: $font__line-height-h6;
 }
 
 // Links
 a {
-    color: $font--color-link;
+    color: $font__color-link;
 }
 
 // Code Snippets
 pre,
 code {
-    font-family: $font--family-code;
+    font-family: $font__family-code;
 }
 
 // General font styles
 %description {
-    font-size: $font--size-large;
+    font-size: $font__size-large;
 }

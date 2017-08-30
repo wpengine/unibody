@@ -1,11 +1,15 @@
-ul, ol {
+ul, ol, menu {
     list-style-type: none;
-    margin-left: $spacer--0;
-    padding-left: 1rem;
+    margin-left: $spacer__0;
+    padding-left: 2rem;
 
-    > li {
+    > li, > menuitem {
+        position: relative;
+
         &::before {
-            padding-right: $spacer--1;
+            position: absolute;
+            right: 100%;
+            padding-right: $spacer__2;
         }
     }
 }
@@ -13,7 +17,7 @@ ul, ol {
 ul {
     > li {
         &::before {
-            content: '\x025B8';
+            content: '\025B8';
         }
     }
 }
@@ -25,6 +29,14 @@ ol {
         &::before {
             content: counter(li) ')';
             counter-increment: li;
+        }
+    }
+}
+
+menu {
+    > menuitem, > li {
+        &::before {
+            content: '\000BB';
         }
     }
 }
