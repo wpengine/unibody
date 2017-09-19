@@ -1,0 +1,30 @@
+// Define our core button styles
+button
+.button,
+[type="submit"],
+[type="button"] {
+  @extend %button;
+}
+
+$buttons: (
+  'sunset-mirage' : $color--white  $color--white  $color--sunset  $color--mirage $color--sunset  $color--mirage,
+  'sunset-white'  : $color--white  $color--mirage $color--sunset  $color--white  $color--sunset  $color--mirage,
+  'tiffany-mirage': $color--white  $color--white  $color--tiffany $color--mirage $color--tiffany $color--mirage,
+  'tiffany-white' : $color--white  $color--mirage $color--tiffany $color--white  $color--tiffany $color--white,
+  'mirage-white'  : $color--white  $color--mirage $color--mirage  $color--white  $color--mirage  $color--white,
+  'hollow-mirage' : $color--mirage $color--white  $color--none    $color--mirage $color--mirage  $color--mirage,
+  'hollow-white'  : $color--white  $color--mirage $color--none    $color--white  $color--white   $color--white,
+  );
+
+@each $label, $colors in $buttons {
+  .button--#{$label} {
+    @include button( $colors... );
+  }
+}
+
+// Define our button group styles
+.button-group {
+	> %button {
+		min-width: 200px;
+	}
+}

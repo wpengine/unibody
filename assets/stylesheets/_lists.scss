@@ -1,0 +1,30 @@
+ul, ol {
+    list-style-type: none;
+    margin-left: $spacer--0;
+    padding-left: 1rem;
+
+    > li {
+        &::before {
+            padding-right: $spacer--1;
+        }
+    }
+}
+
+ul {
+    > li {
+        &::before {
+            content: '\x025B8';
+        }
+    }
+}
+
+ol {
+    counter-reset: li;
+
+    > li {
+        &::before {
+            content: counter(li) ')';
+            counter-increment: li;
+        }
+    }
+}

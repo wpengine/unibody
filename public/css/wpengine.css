@@ -1,7 +1,52 @@
+/**
+ * Core WP Engine Styles
+ * for the UI / UX brand
+ *
+ * The UI / UX kit follows the BEM naming convention
+ * @link http://getbem.com/naming/
+ */
+/**
+ * Variables for the WP Engine UI / UX kit
+ */
+/**
+ * Convert angle
+ *
+ * @author Chris Eppstein
+ * @param {Number} $value - Value to convert
+ * @param {String} $unit - Unit to convert to
+ * @return {Number} Converted angle
+ */
+/**
+ * Test if `$value` is an angle
+ *
+ * @param {*} $value - Value to test
+ * @return {Bool}
+ */
+/**
+ * Convert a direction to legacy syntax
+ *
+ * @param {Keyword | Angle} $value - Value to convert
+ * @require {function} is-direction
+ * @require {function} convert-angle
+ * @return {Mixed} Angle value or legacy keyword value
+ */
+/**
+ * Mixin printing a linear-gradient
+ * as well as a plain color fallback
+ * and the `-webkit-` prefixed declaration
+ *
+ * @example `@include linear-gradient(#31B7D7, #EDAC7D);`
+ * @example `@include linear-gradient(to bottom, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);`
+ * @example `@include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%);`
+ *
+ * @access public
+ * @param {String | List | Angle} $direction - Linear gradient direction
+ * @param {Arglist} $color-stops - List of color-stops composing the gradient
+ */
 body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.375;
   color: #121B24; }
 
@@ -11,6 +56,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700; }
 
 h1 {
@@ -44,75 +90,21 @@ pre,
 code {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; }
 
-button, .button {
-  padding: 20px 40px;
-  border-width: 2px;
-  font-weight: 600;
-  line-height: 1; }
-
-.button--primary-light {
-  background-color: #0ECAD4;
-  border-color: #0ECAD4;
-  color: #121B24; }
-  .button--primary-light:hover, .button--primary-light:focus, .active.button--primary-light {
-    background-color: transparent; }
-
-.button--primary-dark {
-  background-color: #0ECAD4;
-  border-color: #0ECAD4;
-  color: #FFFFFF; }
-  .button--primary-dark:hover, .button--primary-dark:focus, .active.button--primary-dark {
-    background-color: transparent; }
-
-.button--secondary-light {
-  background-color: transparent;
-  border-color: #121B24;
-  color: #121B24; }
-  .button--secondary-light:hover, .button--secondary-light:focus, .active.button--secondary-light {
-    background-color: #121B24;
-    color: #FFFFFF; }
-
-.button--secondary-dark {
-  background-color: transparent;
-  border-color: #FFFFFF;
-  color: #FFFFFF; }
-  .button--secondary-dark:hover, .button--secondary-dark:focus, .active.button--secondary-dark {
-    background-color: #FFFFFF;
-    color: #121B24; }
-
-.button--cta-light {
-  background-color: #FF6C29;
-  border-color: #FF6C29;
-  color: #121B24; }
-  .button--cta-light:hover, .button--cta-light:focus, .active.button--cta-light {
-    background-color: transparent; }
-
-.button--cta-dark {
-  background-color: #FF6C29;
-  border-color: #FF6C29;
-  color: #FFFFFF; }
-  .button--cta-dark:hover, .button--cta-dark:focus, .active.button--cta-dark {
-    background-color: transparent; }
-
-ul, ol, menu {
+/**
+ * List styles
+ */
+ul, ol {
   list-style-type: none;
   margin-left: 0;
-  padding-left: 2rem; }
-  ul > li, ul > menuitem, ol > li, ol > menuitem, menu > li, menu > menuitem {
-    position: relative; }
-    ul > li::before, ul > menuitem::before, ol > li::before, ol > menuitem::before, menu > li::before, menu > menuitem::before {
-      position: absolute;
-      right: 100%;
-      padding-right: 10px; }
+  padding-left: 1rem; }
+  ul > li::before, ol > li::before {
+    padding-right: 5px; }
 
 ul > li::before {
-  content: '\025B8'; }
+  content: '\x025B8'; }
 
 ol {
   counter-reset: li; }
   ol > li::before {
     content: counter(li) ")";
     counter-increment: li; }
-
-menu > menuitem::before, menu > li::before {
-  content: '\000BB'; }

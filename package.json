@@ -3,8 +3,8 @@
     "version": "0.1",
     "description": "The core styles, images, and javascript for the WP Engine brand",
     "main": "assets/javascripts/wpengine.js",
-    "style": "assets/stylesheets/wpengine.scss",
-    "sass": "assets/stylesheets/wpengine.scss",
+    "style": "style.scss",
+    "sass": "style.scss",
     "files": [
         "assets"
     ],

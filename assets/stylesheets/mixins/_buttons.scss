@@ -1,0 +1,24 @@
+@mixin button( $color, $color-hover, $background, $background-hover, $border, $border-hover ) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    &:hover, &:active {
+      color: $color-hover;
+      background-color: $background-hover;
+      border-color: $border-hover;
+    }
+}
+
+%button {
+  display: inline-block;
+  padding: $spacer--3 $spacer--4;
+  border-width: $spacer--border;
+  border-style: solid;
+  font-size: $font--size;
+  font-weight: $font--weight-bold;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 2px 2px 2px 0 $color--gray-dark;
+}

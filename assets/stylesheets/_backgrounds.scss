@@ -1,0 +1,19 @@
+%background--gradient-1 {
+    @include linear-gradient( $color--secondary-4, $color--secondary-2 );
+}
+
+%background--gradient-2 {
+    @include linear-gradient( $color--secondary-3, $color--secondary-6 );
+}
+
+%background--gray-light {
+    background-color: $color--gray-light;
+}
+
+%background--primary-2 {
+    background-color: $color--primary-2;
+}
+
+%background--primary-3 {
+    background-color: $color--primary-3;
+}
