@@ -13,8 +13,8 @@ $color--winter:     #F1F1F1 !default;
 $color--white:      #FFFFFF !default;
 $color--black:      #000000 !default;
 $color--gray-light: $color--winter;
-$color--gray-med:   darken( $color--gray-light, 30% ) !default;
-$color--gray-dark:  darken( $color--gray-med, 30% ) !default;
+$color--gray-med:   darken( $color--gray-light, 50% ) !default;
+$color--gray-dark:  darken( $color--gray-med, 50% ) !default;
 
 $color--none: transparent !default;
 
@@ -47,7 +47,8 @@ $font--family-code: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Ty
 $font--size-body:  16px !default;
 
 $font--size:       1rem !default;
-$font--size-large: $font--size * 1.5;
+$font--size-bump:  1.125rem !default;
+$font--size-large: 1.5rem !default;
 $font--size-h1:    4.5rem !default;
 $font--size-h2:    2.75rem !default;
 $font--size-h3:    1.5rem !default;

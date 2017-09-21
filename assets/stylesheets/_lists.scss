@@ -13,7 +13,7 @@ ul, ol {
 ul {
     > li {
         &::before {
-            content: '\x025B8';
+            content: '\25B8';
         }
     }
 }
