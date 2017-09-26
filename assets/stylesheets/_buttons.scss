@@ -1,5 +1,5 @@
 // Define our core button styles
-button
+button,
 .button,
 [type="submit"],
 [type="button"] {
@@ -8,7 +8,7 @@ button
 
 $buttons: (
   'sunset-mirage' : $color--white  $color--white  $color--sunset  $color--mirage $color--sunset  $color--mirage,
-  'sunset-white'  : $color--white  $color--mirage $color--sunset  $color--white  $color--sunset  $color--mirage,
+  'sunset-white'  : $color--white  $color--mirage $color--sunset  $color--white  $color--sunset  $color--white,
   'tiffany-mirage': $color--white  $color--white  $color--tiffany $color--mirage $color--tiffany $color--mirage,
   'tiffany-white' : $color--white  $color--mirage $color--tiffany $color--white  $color--tiffany $color--white,
   'mirage-white'  : $color--white  $color--mirage $color--mirage  $color--white  $color--mirage  $color--white,

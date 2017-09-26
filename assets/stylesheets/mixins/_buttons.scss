@@ -1,13 +1,14 @@
 @mixin button( $color, $color-hover, $background, $background-hover, $border, $border-hover ) {
-    color: $color;
-    background-color: $background;
-    border-color: $border;
+  color: $color;
+  background-color: $background;
+  border-color: $border;
 
-    &:hover, &:active {
-      color: $color-hover;
-      background-color: $background-hover;
-      border-color: $border-hover;
-    }
+  &:active,
+  &:hover {
+    color: $color-hover;
+    background-color: $background-hover;
+    border-color: $border-hover;
+  }
 }
 
 %button {
@@ -20,5 +21,6 @@
   line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: 2px 2px 2px 0 $color--gray-dark;
+  text-align: center;
+  box-shadow: 2px 2px 2px 0 $color--gray-med;
 }
