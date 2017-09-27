@@ -84,6 +84,10 @@
     background: linear-gradient($direction, $color-stops);
 }
 
+%background--white {
+  background-color: $color--white;
+}
+
 %background--polar {
   background-color: $color--polar;
 }
