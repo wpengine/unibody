@@ -76,10 +76,50 @@
 @mixin linear-gradient($direction, $color-stops...) {
     @if is-direction($direction) == false {
         $color-stops: ($direction, $color-stops);
-        $direction: 90deg;
+        $direction: 105deg;
     }
 
     background: nth(nth($color-stops, 1), 1);
     background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
     background: linear-gradient($direction, $color-stops);
+}
+
+%background--polar {
+  background-color: $color--polar;
+}
+
+%background--tiffany {
+  background-color: $color--tiffany;
+}
+
+%background--mirage {
+  background-color: $color--mirage;
+}
+
+%background--sunset {
+  background-color: $color--sunset;
+}
+
+%background--tiffoam {
+  @include linear-gradient( $color--tiffany, $color--tiffany, $color--seafoam );
+}
+
+%background--nightwolf {
+  @include linear-gradient( $color--tiffany, $color--royal );
+}
+
+%background--dusk {
+  @include linear-gradient( $color--royal, $color--sunset );
+}
+
+%background--phoenix {
+  @include linear-gradient( $color--curry, $color--cherry );
+}
+
+%background--palm {
+  @include linear-gradient( $color--seafoam, $color--curry );
+}
+
+%background-midnight {
+  @include linear-gradient( $color--tiffany, $color--mirage, $color--mirage );
 }
