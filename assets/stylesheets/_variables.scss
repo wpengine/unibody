@@ -38,6 +38,33 @@ $colors--grayscale:
   $color--soot
   $color--black;
 
+$colors: $colors--primary $colors--secondary $colors--grayscale;
+
+$colors-map--primary: (
+  'tiffany':       $color--tiffany,
+  'mirage':        $color--mirage,
+  'sunset':        $color--sunset,
+);
+
+$colors-map--secondary: (
+  'cherry':        $color--cherry,
+  'curry':         $color--curry,
+  'seafoam':       $color--seafoam,
+  'dollabillz':    $color--dollabillz,
+  'lapis':         $color--lapis,
+  'royal':         $color--royal
+);
+
+$colors-map--grayscale: (
+  'white':        $color--white,
+  'polar':        $color--polar,
+  'ash':          $color--ash,
+  'soot':         $color--soot,
+  'black':        $color--black
+);
+
+$colors-map: map_merge( map_merge( $colors-map--primary, $colors-map--secondary ), $colors-map--grayscale );
+
 // Font settings
 $font--family:            'Open Sans', Arial, sans-serif;
 $font--family-heading:    $font--family;
