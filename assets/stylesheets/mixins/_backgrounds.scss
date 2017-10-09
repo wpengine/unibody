@@ -124,6 +124,6 @@
   @include linear-gradient( $color--seafoam, $color--curry );
 }
 
-%background-midnight {
+%background--midnight {
   @include linear-gradient( $color--tiffany, $color--mirage, $color--mirage );
 }
