@@ -26,5 +26,21 @@ $buttons: (
 .button-group {
 	> %button {
 		min-width: 200px;
+
+    @media (max-width: $breakpoint--md - 1) {
+      width: 100%;
+
+      &:nth-child(2) {
+        margin-top: $spacer--2;
+      }
+    }
+
+    @media (min-width: $breakpoint--md) {
+      width: auto;
+
+      &:nth-child(2) {
+        margin-left: $spacer--2;
+      }
+    }
 	}
 }
