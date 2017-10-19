@@ -1,38 +1,41 @@
-ul, ol {
-    list-style-type: none;
-    margin-left: $spacer--0;
-    padding-left: 1rem;
+ul,
+ol {
+  list-style-type: none;
+  margin-left: $spacer--0;
+  margin-bottom: $spacer--2;
+  padding-left: 1rem;
+  line-height: $font--line-height-list;
 
-    > li {
-        position: relative;
-        margin-bottom: $spacer--1;
+  > li {
+    position: relative;
+    margin-bottom: 0;
 
-        &::before {
-            position: absolute;
-            display: block;
-            top: 0em;
-            left: -1em;
-            content: 'x';
-            padding-right: $spacer--1;
-        }
+    &::before {
+      position: absolute;
+      display: block;
+      top: 0em;
+      left: -1em;
+      content: 'x';
+      padding-right: $spacer--1;
     }
+  }
 }
 
 ul {
-    > li {
-        &::before {
-            content: '\25B8';
-        }
+  > li {
+    &::before {
+      content: '\25B8';
     }
+  }
 }
 
 ol {
-    counter-reset: li;
+  counter-reset: li;
 
-    > li {
-        &::before {
-            content: counter(li) ')';
-            counter-increment: li;
-        }
+  > li {
+    &::before {
+      content: counter(li) ')';
+      counter-increment: li;
     }
+  }
 }
