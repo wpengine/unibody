@@ -1,3 +1,6 @@
+//
+// Basic paragraph style used across the site.
+//
 @mixin paragraph-base-style {
   margin-bottom: $spacer--2;
   font-size: $font--size-body;
@@ -5,6 +8,9 @@
   line-height: $font--line-height;
 }
 
+//
+// Larger paragraph style
+//
 @mixin paragraph-big-style {
   margin-bottom: $spacer--2;
   font-size: $font--size-bump;
@@ -24,6 +30,9 @@
   }
 }
 
+//
+// Extra-large paragraph style
+//
 @mixin paragraph-xl-style {
   margin-bottom: $spacer--2;
   font-size: $font--size-medium;
@@ -40,5 +49,104 @@
     margin-bottom: $spacer--4;
     font-size: $font--size-large;
     line-height: 1.375;
+  }
+}
+
+//
+// Builds the heading styles
+//
+// @param $level Any number between 1 and 6, essentially mapping to h1 through h6 tags.
+//
+@mixin heading-styles($level: 1) {
+  font-family: $font--family-heading;
+  font-weight: $font--weight-heading;
+  margin: $spacer--4 0 $spacer--2;
+
+  @media screen and (min-width: $breakpoint--md) {
+    margin: #{$spacer * 1.5} 0 $spacer--3;
+  }
+
+  @media screen and (min-width: $breakpoint--lg) {
+    margin: $spacer--5 0 $spacer--4;
+  }
+
+  // Level 1
+  @if 1 == $level {
+    font-size: $font--size-h3;
+    line-height: $font--line-height-h3;
+
+    @media screen and (min-width: $breakpoint--md) {
+      font-size: $font--size-h2;
+      line-height: $font--line-height-h2;
+    }
+
+    @media screen and (min-width: $breakpoint--lg) {
+      font-size: $font--size-h1;
+      line-height: $font--line-height-h1;
+    }
+
+  // Level 2
+  } @else if 2 == $level {
+    font-size: $font--size-h4;
+    line-height: $font--line-height-h4;
+
+    @media screen and (min-width: $breakpoint--md) {
+      font-size: $font--size-h3;
+      line-height: $font--line-height-h3;
+    }
+
+    @media screen and (min-width: $breakpoint--lg) {
+      font-size: $font--size-h2;
+      line-height: $font--line-height-h2;
+    }
+
+  // Level 3
+  } @else if 3 == $level {
+    font-size: $font--size-h5;
+    line-height: $font--line-height-h5;
+
+    @media screen and (min-width: $breakpoint--md) {
+      font-size: $font--size-h4;
+      line-height: $font--line-height-h4;
+    }
+
+    @media screen and (min-width: $breakpoint--lg) {
+      font-size: $font--size-h3;
+      line-height: $font--line-height-h3;
+    }
+
+  // Level 4
+  } @else if 4 == $level {
+    font-size: $font--size-h6;
+    line-height: $font--line-height-h6;
+
+    @media screen and (min-width: $breakpoint--md) {
+      font-size: $font--size-h5;
+      line-height: $font--line-height-h5;
+    }
+
+    @media screen and (min-width: $breakpoint--lg) {
+      font-size: $font--size-h4;
+      line-height: $font--line-height-h4;
+    }
+
+  // Level 5
+  } @else if 5 == $level {
+    font-size: $font--size-h6;
+    line-height: $font--line-height-h6;
+
+    @media screen and (min-width: $breakpoint--lg) {
+      font-size: $font--size-h5;
+      line-height: $font--line-height-h5;
+    }
+
+  // Level 6
+  } @else if 6 == $level {
+    font-size: $font--size-h6;
+    line-height: $font--line-height-h6;
+  }
+
+  &:first-child {
+    margin-top: 0;
   }
 }
