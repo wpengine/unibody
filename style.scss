@@ -1,8 +1,15 @@
+//
 // Core WP Engine Styles
-// for the UI / UX brand
-
-// The UI / UX kit follows the BEM naming convention
-// @link http://getbem.com/naming/
+//
+// On top of the Abstract variables and mixins, this
+// provides a more opinionated "normalize" to be used
+// across the WP Engine sites. Basic typography and
+// inline elements should be included, but anything
+// related to sizing, layout, etc, should be left to
+// the theme.
+//
+// @see http://getbem.com/naming/
+//
 
 @import 'abstract';
 
