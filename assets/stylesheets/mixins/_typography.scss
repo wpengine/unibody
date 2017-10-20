@@ -1,54 +1,96 @@
 //
-// Basic paragraph style used across the site.
+// Basic text size and styling used across the site.
 //
-@mixin paragraph-base-style {
-  margin-bottom: $spacer--2;
+@mixin text-style--base {
   font-size: $font--size-body;
   font-weight: $font--weight;
   line-height: $font--line-height;
 }
 
 //
-// Larger paragraph style
+// Apples the basic text size plus margin for paragraphs
 //
-@mixin paragraph-big-style {
-  margin-bottom: $spacer--2;
+@mixin paragraph-style--base {
+  @include text-style--base;
+
+  p {
+    margin-bottom: $spacer--2;
+  }
+}
+
+//
+// Larger text size, used inside tile containers
+//
+@mixin text-style--big {
   font-size: $font--size-bump;
   font-weight: $font--weight;
   line-height: $font--line-height;
 
   @media screen and (min-width: $breakpoint--md) {
-    margin-bottom: $spacer--3;
     font-size: $font--size-medium;
     line-height: 1.35;
   }
 
   @media screen and (min-width: $breakpoint--lg) {
-    margin-bottom: $spacer--3;
     font-size: $font--size-largeish;
     line-height: 1.3636;
   }
 }
 
 //
-// Extra-large paragraph style
+// Larger paragraph style
 //
-@mixin paragraph-xl-style {
-  margin-bottom: $spacer--2;
+@mixin paragraph-style--big {
+  @include text-style--big;
+
+  p {
+    margin-bottom: $spacer--2;
+
+    @media screen and (min-width: $breakpoint--md) {
+      margin-bottom: $spacer--3;
+    }
+
+    @media screen and (min-width: $breakpoint--lg) {
+      margin-bottom: $spacer--3;
+    }
+  }
+}
+
+//
+// Extra-large text size, used outside tile containers
+//
+@mixin text-style--xl {
   font-size: $font--size-medium;
   font-weight: $font--weight;
   line-height: 1.35;
 
   @media screen and (min-width: $breakpoint--md) {
-    margin-bottom: $spacer--3;
     font-size: $font--size-largeish;
     line-height: 1.3636;
   }
 
   @media screen and (min-width: $breakpoint--lg) {
-    margin-bottom: $spacer--4;
     font-size: $font--size-large;
     line-height: 1.375;
+  }
+}
+
+//
+// Extra-large paragraph style
+//
+@mixin paragraph-style--xl {
+  @include text-style--xl;
+
+  p {
+    margin-bottom: $spacer--2;
+
+    @media screen and (min-width: $breakpoint--md) {
+      margin-bottom: $spacer--3;
+    }
+
+    @media screen and (min-width: $breakpoint--lg) {
+      margin-bottom: $spacer--4;
+    }
   }
 }
 

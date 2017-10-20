@@ -1,5 +1,5 @@
 body {
-  @include paragraph-base-style;
+  @include paragraph-style--base;
   color: $font--color;
   font-family: $font--family;
 }
@@ -33,11 +33,6 @@ h5,
 h6,
 .heading--size-6 {
   @include heading-styles(6);
-}
-
-// Paragraphs
-p {
-  @include paragraph-base-style;
 }
 
 // Paragraph elements
