@@ -200,7 +200,7 @@
     line-height: $font--line-height-h6;
   }
 
-  &:not(:first-child) {
+  p + & {
     margin-top: $spacer--4;
 
     @media screen and (min-width: $breakpoint--md) {
