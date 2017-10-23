@@ -14,7 +14,7 @@
   @include text-style--base;
 
   p {
-    margin-bottom: $spacer--2;
+    margin: 0 0 $spacer--2;
   }
 
   p:last-child {
@@ -48,7 +48,7 @@
   @include text-style--big;
 
   p {
-    margin-bottom: $spacer--2;
+    margin: 0 0 $spacer--2;
 
     @media screen and (min-width: $breakpoint--md) {
       margin-bottom: $spacer--3;
@@ -90,7 +90,7 @@
   @include text-style--xl;
 
   p {
-    margin-bottom: $spacer--2;
+    margin: 0 0 $spacer--2;
 
     @media screen and (min-width: $breakpoint--md) {
       margin-bottom: $spacer--3;
