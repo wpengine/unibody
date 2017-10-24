@@ -16,8 +16,8 @@ ol {
       display: block;
       top: 0em;
       left: -1em;
-      content: 'x';
-      padding-right: $spacer--1;
+      content: '';
+      margin-right: $spacer--1;
     }
   }
 }
@@ -25,7 +25,12 @@ ol {
 ul {
   > li {
     &::before {
-      content: '\25B8';
+      width: 6px;
+      height: 6px;
+      top: 0.75em;
+      transform: translateY(-50%);
+      background: currentColor;
+      opacity: 0.3;
     }
   }
 }
