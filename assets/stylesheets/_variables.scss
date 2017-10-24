@@ -70,35 +70,47 @@ $font--family:            'Open Sans', Arial, sans-serif;
 $font--family-heading:    $font--family;
 $font--family-code:       "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
-$font--size-body:         16px !default;
-$font--size-small:        0.875rem !default;
-$font--size:              1rem !default;
-$font--size-bump:         1.125rem !default;
-$font--size-largeish:     1.375rem !default;
-$font--size-large:        1.5rem !default;
-$font--size-h1:           4.5rem !default;
-$font--size-h2:           2.75rem !default;
-$font--size-h3:           1.5rem !default;
-$font--size-h4:           1.3125rem !default;
-$font--size-h5:           $font--size !default;
-$font--size-h6:           $font--size !default;
+$font--size-body:          16px     !default;
 
-$font--weight:            300 !default;
-$font--weight-light:      100 !default;
-$font--weight-bold:       400 !default;
-$font--weight-extra-bold: 700 !default;
-$font--weight-heading:    $font--weight-extra-bold !default;
+$font--size-small:         0.875rem !default; // 14px
+$font--size:               1rem     !default; // 16px
+$font--size-bump:          1.125rem !default; // 18px
+$font--size-medium:        1.25rem  !default; // 20px
+$font--size-largeish:      1.375rem !default; // 22px
+$font--size-large:         1.5rem   !default; // 24px
 
-$font--line-height:       1.375 !default;
-$font--line-height-h1:    1.111 !default;
-$font--line-height-h2:    1.363 !default;
-$font--line-height-h3:    $font--line-height !default;
-$font--line-height-h4:    $font--line-height !default;
-$font--line-height-h5:    $font--line-height !default;
-$font--line-height-h6:    $font--line-height !default;
+$font--size-h1:            3.5rem   !default; // 56px
+$font--size-h2:            2.75rem  !default; // 44px
+$font--size-h3:            2rem     !default; // 32px
+$font--size-h4:            1.75rem  !default; // 28px
+$font--size-h5:            1.5rem   !default; // 24px
+$font--size-h6:            1.125rem !default; // 18px
+
+$font--size-hero-1:        4.5rem   !default; // 72px
+$font--size-hero-1:        3.5rem   !default; // 56px
+$font--size-hero-1:        2.75rem  !default; // 44px
+
+$font--weight:             400 !default;
+$font--weight-light:       300 !default;
+$font--weight-bold:        700 !default;
+$font--weight-extra-bold:  800 !default;
+$font--weight-heading:     $font--weight-extra-bold !default;
+
+$font--line-height:        1.6875 !default; // 27px / 16px
+$font--line-height-h1:     1.3571 !default; // 76px / 56px
+$font--line-height-h2:     1.3634 !default; // 60px / 44px
+$font--line-height-h3:     1.3438 !default; // 43px / 32px
+$font--line-height-h4:     1.3571 !default; // 38px / 28px
+$font--line-height-h5:     1.375  !default; // 33px / 24px
+$font--line-height-h6:     1.3333 !default; // 24px / 18px
+$font--line-height-list:   1.875  !default; // 30px / 16px
+
+$font--line-height-hero-1: 1.1111 !default; // 80px / 72px
+$font--line-height-hero-2: 1      !default; // 56px / 56px
+$font--line-height-hero-3: 1.0909 !default; // 48px / 44px
 
 $font--color:             $color--mirage;
-$font--color-link:        $color--tiffany;
+$font--color-link:        $color--sunset;
 
 // Spacers
 $spacer:                  40px !default;
@@ -107,9 +119,8 @@ $spacer--1:               1rem;
 $spacer--2:               $spacer * 0.5;
 $spacer--3:               $spacer * 0.75;
 $spacer--4:               $spacer * 1;
-$spacer--5:               $spacer * 1.5;
-$spacer--6:               $spacer * 2;
-$spacer--7:               $spacer * 3;
+$spacer--5:               $spacer * 2;
+$spacer--6:               $spacer * 3;
 $spacer--border:          2px;
 
 // Container breakpoints
@@ -117,7 +128,3 @@ $breakpoint--sm:          540px !default;
 $breakpoint--md:          768px !default;
 $breakpoint--lg:          960px !default;
 $breakpoint--xl:          1140px !default;
-
-// Common Sizes
-$header__height--sm:      77px !default;
-$header__height--lg:      159px !default;
