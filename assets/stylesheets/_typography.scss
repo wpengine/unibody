@@ -1,70 +1,111 @@
 body {
-  font-family: $font--family;
-  font-size: $font--size-body;
-  font-weight: $font--weight;
-  line-height: $font--line-height;
+  @include paragraph-style--base;
   color: $font--color;
+  font-family: $font--family;
 }
 
 // Headings
 h1,
+.heading--size-1 {
+  @include heading-styles(1);
+}
+
 h2,
+.heading--size-2 {
+  @include heading-styles(2);
+}
+
 h3,
+.heading--size-3 {
+  @include heading-styles(3);
+}
+
 h4,
+.heading--size-4 {
+  @include heading-styles(4);
+}
+
 h5,
-h6 {
-  font-family: $font--family-heading;
-  font-weight: $font--weight-heading;
-  margin-top: 0;
-  margin-bottom: $spacer--2;
+.heading--size-5 {
+  @include heading-styles(5);
 }
 
-h1 {
-  font-size: $font--size-h1;
-  line-height: $font--line-height-h1;
+h6,
+.heading--size-6 {
+  @include heading-styles(6);
 }
 
-h2 {
-  font-size: $font--size-h2;
-  line-height: $font--line-height-h2;
-}
-
-h3 {
-  font-size: $font--size-h3;
-  line-height: $font--line-height-h3;
-}
-
-h4 {
-  font-size: $font--size-h4;
-  line-height: $font--line-height-h4;
-}
-
-h5 {
-  font-size: $font--size-h5;
-  line-height: $font--line-height-h5;
-}
-
-h6 {
-  font-size: $font--size-h6;
-  line-height: $font--line-height-h6;
-}
-
-// Links
+// Paragraph elements
 a {
   color: $font--color-link;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($font--color-link, 10%);
+    text-decoration: none;
+  }
 }
 
-// Code Snippets
-code,
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
 pre {
+  margin-bottom: $spacer--2;
+  padding: $spacer--1;
+  background: $color--polar;
+  font-size: $font--size-small;
+  max-width: 100%;
+  overflow: auto;
+}
+
+code,
+kbd,
+tt,
+var {
   font-family: $font--family-code;
+  font-size: $font--size-small;
+  background: $color--polar;
 }
 
-// General font styles
-%large {
-  font-size: $font--size-large;
+abbr,
+acronym {
+  border-bottom: 1px dotted $color--ash;
+  cursor: help;
 }
 
-%largeish {
-  font-size: $font--size-largeish;
+mark,
+ins {
+  background: $color--polar;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+b,
+strong {
+  font-weight: $font--weight-bold;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 $spacer--2 $spacer--2;
 }
