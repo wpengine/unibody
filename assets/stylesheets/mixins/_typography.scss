@@ -114,14 +114,14 @@
 @mixin heading-styles($level: 1) {
   font-family: $font--family-heading;
   font-weight: $font--weight-heading;
-  margin-bottom: $spacer--2;
+  margin: 0 0 $spacer--2;
 
   @media screen and (min-width: $breakpoint--md) {
-    margin-bottom: $spacer--3;
+    margin: 0 0 $spacer--3;
   }
 
   @media screen and (min-width: $breakpoint--lg) {
-    margin-bottom: $spacer--4;
+    margin: 0 0 $spacer--4;
   }
 
   // Level 1
