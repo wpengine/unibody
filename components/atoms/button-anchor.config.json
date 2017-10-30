@@ -1,9 +1,67 @@
 {
-  "title": "Button; rendered with &lt;a&gt;",
-  "label": "Button &lt;a&gt;",
-  "status": "prototype",
-  "context": {       
-    "button__text": "Default Button",
-    "button__link": "https://wpengine.com/plans"
-  }
+	"title": "Button; rendered with &lt;a&gt;",
+	"label": "Button &lt;a&gt;",
+	"status": "prototype",
+	"context": {
+		"button__text": "Default Button",
+		"button__link": "https://wpengine.com/plans"
+	},
+	"variants": [
+		{
+			"name": "sunset-mirage-button",
+			"context": {
+				"button__text": "Sunset Mirage Button",
+				"button__link": "#",
+				"button__modifier": "button--sunset-mirage"
+			}
+		},
+		{
+			"name": "sunset-white-button",
+			"context": {
+				"button__text": "Sunset White Button",
+				"button__link": "#",
+				"button__modifier": "button--sunset-white"
+			}
+		},
+		{
+			"name": "tiffany-mirage-button",
+			"context": {
+				"button__text": "Tiffany Mirage Button",
+				"button__link": "#",
+				"button__modifier": "button--tiffany-mirage"
+			}
+		},
+		{
+			"name": "tiffany-white-button",
+			"context": {
+				"button__text": "Tiffany White Button",
+				"button__link": "#",
+				"button__modifier": "button--tiffany-white"
+			}
+		},
+		{
+			"name": "mirage-white-button",
+			"context": {
+				"button__text": "Mirage White Button",
+				"button__link": "#",
+				"button__modifier": "button--mirage-white"
+			}
+		},
+		{
+			"name": "hollow-mirage-button",
+			"context": {
+				"button__text": "Hollow Mirage Button",
+				"button__link": "#",
+				"button__modifier": "button--hollow-mirage"
+			}
+		},
+		{
+			"name": "hollow-white-button",
+			"context": {
+				"button__text": "Hollow White Button",
+				"button__link": "#",
+				"button__modifier": "button--hollow-white"
+			}
+		}
+	]
 }
