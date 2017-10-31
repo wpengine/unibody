@@ -2,6 +2,7 @@
   color: $color;
   background-color: $background;
   border-color: $border;
+  transition: all 0.25s ease;
 
   &:active,
   &:hover {
@@ -13,7 +14,7 @@
 
 %button {
   display: inline-block;
-  padding: $spacer--2 $spacer--3;
+  padding: $spacer--2 $spacer--4;
   border-width: $spacer--border;
   border-style: solid;
   font-size: $font--size-small;

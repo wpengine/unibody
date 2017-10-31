@@ -30,7 +30,7 @@ $buttons: (
     @media (max-width: $breakpoint--md - 1) {
       width: 100%;
 
-      &:nth-child(2) {
+      &:not(:first-child) {
         margin-top: $spacer--2;
       }
     }
@@ -38,7 +38,7 @@ $buttons: (
     @media (min-width: $breakpoint--md) {
       width: auto;
 
-      &:nth-child(2) {
+      &:not(:first-child) {
         margin-left: $spacer--2;
       }
     }

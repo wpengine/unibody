@@ -13,7 +13,7 @@ var shell = require( 'gulp-shell' ); // allows shell commands
 
 // Compile scss
 gulp.task( 'sass', function () {
-    return gulp.src( './assets/stylesheets/wpengine.scss' )
+    return gulp.src( './style.scss' )
         .pipe( sass().on( 'error', sass.logError ) )
         .pipe( gulp.dest( './public/css/' ) );
 } );
