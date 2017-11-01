@@ -5,12 +5,14 @@ node_modules
 build
 .publish
 vendor
+config.codekit
+.sass-cache
 
 # Public assets
 public/css/style.css
 public/img/svg-icons
 
 # Other
-.log
+*.log
 .DS_Store
 Thumbnails.db

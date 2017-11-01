@@ -1,13 +1,29 @@
 {
-  "name": "unibody",
-  "version": "0.1.0",
-  "dependencies": {
-    "@frctl/fractal": "^1.1.0",
-    "gulp-git": "^1.13.0",
-    "gulp-sass": "^3.1.0",
-    "gulp": "^3.9.1",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-shell": "^0.5.2",
-    "gulp-svg2png": "^2.0.2"
-  }
+    "name": "unibody",
+    "version": "0.1.4",
+    "description": "The core styles, images, and javascript for the WP Engine brand",
+    "main": "assets/javascripts/wpengine.js",
+    "style": "style.scss",
+    "sass": "style.scss",
+    "files": [
+        "assets"
+    ],
+    "repository": {
+        "type": "git"
+    },
+    "keywords": [
+        "sass",
+        "css"
+    ],
+    "contributors": [
+        "Ryan Hoover"
+    ],
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "@frctl/fractal": "^1.1.0",
+        "gulp": "^3.9.1",
+        "gulp-gh-pages": "^0.5.4",
+        "gulp-sass": "^3.1.0",
+        "gulp-shell": "^0.5.2"
+    }
 }

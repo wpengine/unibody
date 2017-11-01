@@ -1,0 +1,14 @@
+//
+// Abstract WP Engine Styles
+//
+// These are the base variables and mixins that can
+// be used across the WP Engine sites. The abstract
+// files should not actually render any CSS when
+// compiled - any actual styling should go in the
+// components included with style.scss.
+//
+// @see http://getbem.com/naming/
+//
+
+@import 'assets/stylesheets/variables';
+@import 'assets/stylesheets/mixins';
