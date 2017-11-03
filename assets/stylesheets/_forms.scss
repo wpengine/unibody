@@ -1,0 +1,50 @@
+legend,
+label {
+  display: block;
+  font-weight: $font--weight-extra-bold;
+  font-size: $font--size-bump;
+}
+
+legend {
+  margin-top: #{$spacer * 1.5};
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  width: 100%;
+  color: $color--mirage;
+  border: 1px solid darken($color--polar, 10%);
+  font-size: $font--size;
+  padding: $font--size;
+
+  @media screen and (min-width: $breakpoint--md) {
+    width: 50%;
+  }
+}
+
+select {
+  width: 100%;
+  padding: $font--size;
+  border: 1px solid darken($color--polar, 10%);
+  -webkit-appearance: none;
+  border-radius: 0;
+  background: $color--white;
+
+  @media screen and (min-width: $breakpoint--md) {
+    width: 50%;
+  }
+}

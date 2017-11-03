@@ -3,6 +3,8 @@
   background-color: $background;
   border-color: $border;
   transition: all 0.25s ease;
+  -webkit-appearance: none;
+  border-radius: 0;
 
   &:active,
   &:hover {
