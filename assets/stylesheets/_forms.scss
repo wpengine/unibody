@@ -27,7 +27,7 @@ input[type="color"],
 textarea {
   width: 100%;
   color: $color--mirage;
-  border: 1px solid darken($color--polar, 10%);
+  border: 1px solid $color--polar-10;
   font-size: $font--size;
   padding: $font--size;
   border-radius: 0;
@@ -40,7 +40,7 @@ textarea {
 select {
   width: 100%;
   padding: $font--size;
-  border: 1px solid darken($color--polar, 10%);
+  border: 1px solid $color--polar-10;
   -webkit-appearance: none;
   border-radius: 0;
   background: $color--white;
