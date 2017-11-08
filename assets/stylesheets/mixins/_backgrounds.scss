@@ -127,3 +127,21 @@
 %background--midnight {
   @include linear-gradient( $color--tiffany, $color--mirage, $color--mirage );
 }
+
+// Let your section's background image bleed up into the header.
+// This is similar to the look on the front page of the site.
+//
+// @example: `@include background_bleeds_into_header();`
+// @example: `@include background_bleeds_into_header( 100px );`
+//
+// @access public
+// @param {String} $row-padding - Amount of padding your section needs, in px.
+@mixin background_bleeds_into_header( $row-padding: $spacer--6 ) {
+  position: relative;
+  z-index: 25;
+  padding-top: #{ $header__height--sm + $row-padding };
+
+  @media ( min-width: $breakpoint--lg ) {
+    padding-top: #{ $header__height--lg + $row-padding };
+  }
+}
