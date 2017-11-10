@@ -83,20 +83,17 @@ input[type="radio"] + label {
     left: $spacer--1;
     top: 0;
   }
-}
 
-input[type="checkbox"] + label {
   &:after {
     display: inline-block;
     position: absolute;
     content: none;
-    height: 7px;
-    width: 15px;
-    border-left: 3px solid $color--tiffany;
-    border-bottom: 3px solid $color--tiffany;
-    transform: rotate(-45deg);
-    left: calc(#{$spacer--1} + 4px);
-    top: 7px;
+    height: 12px;
+    width: 12px;
+    left: calc(#{$spacer--1} + 6px);
+    background-color: $color--tiffany;
+    @extend %background--tiffoam;
+    top: 6px;
   }
 }
 
@@ -106,15 +103,7 @@ input[type="radio"] + label {
   }
 
   &:after {
-    display: inline-block;
-    position: absolute;
-    content: none;
-    height: 12px;
-    width: 12px;
     border-radius: 100%;
-    left: calc(#{$spacer--1} + 6px);
-    background: $color--tiffany;
-    top: 6px;
   }
 }
 
