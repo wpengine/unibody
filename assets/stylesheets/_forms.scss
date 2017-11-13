@@ -31,9 +31,21 @@ textarea {
   @media screen and (min-width: $breakpoint--md) {
     width: 50%;
   }
+
+  // Opacity setting is necessary for some browsers
+  &::placeholder {
+    color: $color--ash;
+    opacity: 1;
+  }
+
+  // Font-style can't be styled on the placeholder itself,
+  // so target the field showing the placeholder instead
+  &:placeholder-shown {
+    font-style: italic;
+  }
 }
 
-select {
+select:not([multiple]) {
   width: 100%;
   padding: $font--size;
   border: 1px solid $color--polar-10;
@@ -47,6 +59,31 @@ select {
 
   @media screen and (min-width: $breakpoint--md) {
     width: 50%;
+  }
+}
+
+select[multiple] {
+  border: 1px solid $color--polar-10;
+
+  option {
+    line-height: 1.2;
+    padding: $spacer--1;
+
+    &:nth-child(odd) {
+      background: $color--polar;
+    }
+  }
+
+  // These look real hacky, but necessary to override default
+  // browser styles on multi select options. Some browsers will
+  // support styling a background image but not a background color.
+  option:checked {
+    background: linear-gradient(to bottom, lighten($color--tiffany, 40%) 0%, lighten($color--tiffany, 40%) 100%);
+  }
+
+  &:focus option:checked {
+    background: linear-gradient(to bottom, $color--tiffany 0%, $color--tiffany 100%);
+    color: $color--white;
   }
 }
 
@@ -81,7 +118,8 @@ input[type="radio"] + label {
     width: 24px;
     border: 1px solid $color--polar-10;
     left: $spacer--1;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &:after {
@@ -90,10 +128,11 @@ input[type="radio"] + label {
     content: none;
     height: 12px;
     width: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     left: calc(#{$spacer--1} + 6px);
     background-color: $color--tiffany;
     @extend %background--tiffoam;
-    top: 6px;
   }
 }
 
