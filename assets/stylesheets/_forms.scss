@@ -31,6 +31,18 @@ textarea {
   @media screen and (min-width: $breakpoint--md) {
     width: 50%;
   }
+
+  // Opacity setting is necessary for some browsers
+  &::placeholder {
+    color: $color--ash;
+    opacity: 1;
+  }
+
+  // Font-style can't be styled on the placeholder itself,
+  // so target the field showing the placeholder instead
+  &:placeholder-shown {
+    font-style: italic;
+  }
 }
 
 select {
