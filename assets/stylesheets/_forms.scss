@@ -62,6 +62,31 @@ select:not([multiple]) {
   }
 }
 
+select[multiple] {
+  border: 1px solid $color--polar-10;
+
+  option {
+    line-height: 1.2;
+    padding: $spacer--1;
+
+    &:nth-child(odd) {
+      background: $color--polar;
+    }
+  }
+
+  // These look real hacky, but necessary to override default
+  // browser styles on multi select options. Some browsers will
+  // support styling a background image but not a background color.
+  option:checked {
+    background: linear-gradient(to bottom, lighten($color--tiffany, 40%) 0%, lighten($color--tiffany, 40%) 100%);
+  }
+
+  &:focus option:checked {
+    background: linear-gradient(to bottom, $color--tiffany 0%, $color--tiffany 100%);
+    color: $color--white;
+  }
+}
+
 fieldset {
   border: 0;
   margin: 0;
