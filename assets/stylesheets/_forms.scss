@@ -45,7 +45,7 @@ textarea {
   }
 }
 
-select {
+select:not([multiple]) {
   width: 100%;
   padding: $font--size;
   border: 1px solid $color--polar-10;
