@@ -28,10 +28,6 @@ textarea {
   padding: $font--size;
   border-radius: 0;
 
-  @media screen and (min-width: $breakpoint--md) {
-    width: 50%;
-  }
-
   // Opacity setting is necessary for some browsers
   &::placeholder {
     color: $color--ash;
@@ -56,10 +52,6 @@ select:not([multiple]) {
   background-repeat: no-repeat;
   background-position: calc(100% - 16px) 50%;
   background-size: 16px;
-
-  @media screen and (min-width: $breakpoint--md) {
-    width: 50%;
-  }
 }
 
 select[multiple] {
