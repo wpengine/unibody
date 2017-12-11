@@ -47,7 +47,7 @@ textarea {
 
 select:not([multiple]) {
   width: 100%;
-  padding: $font--size;
+  padding: 13px 16px;
   border: 1px solid $color--polar-10;
   -webkit-appearance: none;
   border-radius: 0;
@@ -56,6 +56,7 @@ select:not([multiple]) {
   background-repeat: no-repeat;
   background-position: calc(100% - 16px) 50%;
   background-size: 16px;
+  line-height: 1.5;
 }
 
 select[multiple] {
