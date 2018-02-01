@@ -127,3 +127,7 @@
 %background--midnight {
   @include linear-gradient( $color--tiffany, $color--mirage, $color--mirage );
 }
+
+%background--eggplant {
+  @include linear-gradient( $color--royal, $color--mirage );
+}
