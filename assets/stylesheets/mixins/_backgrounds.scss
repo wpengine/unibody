@@ -117,7 +117,7 @@
 }
 
 %background--phoenix {
-  @include linear-gradient( $color--curry, $color--cherry );
+  @include linear-gradient( $color--sunset, $color--cherry, $color--heliotrope );
 }
 
 %background--palm {
@@ -130,4 +130,12 @@
 
 %background--eggplant {
   @include linear-gradient( $color--royal, $color--mirage );
+}
+
+%background--hexaplex {
+  @include linear-gradient( $color--heliotrope, $color--helix );
+}
+
+%background--aurora {
+  @include linear-gradient( $color--dollabillz, #0BA6B1, $color--mirage );
 }
