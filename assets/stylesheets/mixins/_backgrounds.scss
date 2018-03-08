@@ -137,5 +137,7 @@
 }
 
 %background--aurora {
+  // The middle color here is one-off to make the gradient richer,
+  // per Stacey, and shouldn't get its own named variable
   @include linear-gradient( $color--dollabillz, #0BA6B1, $color--mirage );
 }
