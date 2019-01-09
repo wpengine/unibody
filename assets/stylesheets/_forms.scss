@@ -93,61 +93,64 @@ fieldset {
 // Style our checkboxes and radio buttons
 input[type="checkbox"],
 input[type="radio"] {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-input[type="checkbox"] + label,
-input[type="radio"] + label {
   position: relative;
   display: inline-block;
-  padding-left: calc(24px + #{2 * $spacer--1});
+  margin: 0 $spacer--1;
   font-weight: $font--weight;
   font-size: $font--size-bump;
+  visibility: hidden;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 
-  &:before {
+  &::before {
     display: inline-block;
     position: absolute;
     content: "";
-    height: 24px;
-    width: 24px;
+    height: 100%;
+    width: 100%;
     border: 1px solid $color--polar-10;
     left: $spacer--1;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    left: 0;
+    visibility: visible;
   }
 
-  &:after {
+  &::after {
     display: inline-block;
     position: absolute;
     content: none;
-    height: 12px;
-    width: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: calc(#{$spacer--1} + 6px);
+    height: 60%;
+    width: 60%;
+    top: 20%;
+    left: 20%;
+    visibility: visible;
     background-color: $color--tiffany;
     @extend %background--tiffoam;
   }
-}
 
-input[type="radio"] + label {
-  &:before {
-    border-radius: 100%;
+  + label {
+    display: inline-block;
+    width: auto;
+    line-height: 24px;
+    vertical-align: middle;
   }
 
-  &:after {
-    border-radius: 100%;
+  &:checked::after {
+    content: "";
   }
-}
 
-input[type="checkbox"]:checked + label:after,
-input[type="radio"]:checked + label:after {
-  content: "";
-}
-
-input[type="checkbox"]:focus + label:before,
-input[type="radio"]:focus + label:before {
+  &:focus::before {
     outline: $color--polar-40 auto 3px;
+  }
+}
+
+input[type="radio"] {
+  &::before {
+    border-radius: 100%;
+  }
+
+  &::after {
+    border-radius: 100%;
+  }
 }
