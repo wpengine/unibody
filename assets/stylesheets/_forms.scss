@@ -95,36 +95,35 @@ input[type="checkbox"],
 input[type="radio"] {
   position: relative;
   display: inline-block;
+  visibility: hidden;
+  width: $font--size-large;
+  height: $font--size-large;
   margin: 0 $spacer--1;
   font-weight: $font--weight;
   font-size: $font--size-bump;
-  visibility: hidden;
-  width: 24px;
-  height: 24px;
   vertical-align: middle;
 
   &::before {
     display: inline-block;
     position: absolute;
     content: "";
-    height: 100%;
+    visibility: visible;
     width: 100%;
-    border: 1px solid $color--polar-10;
-    left: $spacer--1;
+    height: 100%;
     top: 0;
     left: 0;
-    visibility: visible;
+    border: 1px solid $color--polar-10;
   }
 
   &::after {
     display: inline-block;
     position: absolute;
     content: none;
+    visibility: visible;
     height: 60%;
     width: 60%;
     top: 20%;
     left: 20%;
-    visibility: visible;
     background-color: $color--tiffany;
     @extend %background--tiffoam;
   }
@@ -132,7 +131,7 @@ input[type="radio"] {
   + label {
     display: inline-block;
     width: auto;
-    line-height: 24px;
+    line-height: $font--size-large;
     vertical-align: middle;
   }
 
@@ -141,7 +140,7 @@ input[type="radio"] {
   }
 
   &:focus::before {
-    outline: $color--polar-40 auto 3px;
+    outline: $color--polar-40 auto $spacer--border;
   }
 }
 
