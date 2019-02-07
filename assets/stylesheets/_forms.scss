@@ -153,3 +153,16 @@ input[type="radio"] {
     border-radius: 100%;
   }
 }
+
+// Style GDPR Checkbox.
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	width: calc(100% - 60px);
+	float: right;
+	vertical-align: top;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	vertical-align: top;
+}
