@@ -45,3 +45,21 @@ gulp serve
 gulp deploy
 
 ```
+
+## Symlink Package to Project
+* Create symlink between unibody repo and main project build process
+(so yarn run build will compile + load updated unibody files)
+
+In unibody, run
+```bash
+yarn link
+```
+
+In main project root, run
+```bash
+yarn link unibody
+```
+Once linked, you can now run
+```bash
+yarn run build
+```
