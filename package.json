@@ -1,6 +1,6 @@
 {
     "name": "unibody",
-    "version": "1.5.1",
+    "version": "1.5.3",
     "description": "The core styles, images, and javascript for the WP Engine brand",
     "main": "assets/javascripts/wpengine.js",
     "style": "style.scss",
