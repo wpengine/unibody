@@ -141,3 +141,7 @@
   // per Stacey, and shouldn't get its own named variable
   @include linear-gradient( $color--dollabillz, #0BA6B1, $color--mirage );
 }
+
+%background--glacier {
+  @include linear-gradient( $color--lapis, $color--heliotrope );
+}
