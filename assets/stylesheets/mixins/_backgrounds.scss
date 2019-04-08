@@ -76,7 +76,7 @@
 @mixin linear-gradient($direction, $color-stops...) {
     @if is-direction($direction) == false {
         $color-stops: ($direction, $color-stops);
-        $direction: 105deg;
+        $direction: 141deg;
     }
 
     background: nth(nth($color-stops, 1), 1);
