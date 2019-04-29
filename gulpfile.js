@@ -13,30 +13,30 @@ var shell = require( 'gulp-shell' ); // allows shell commands
 
 // Compile scss
 gulp.task( 'sass', function () {
-    return gulp.src( './style.scss' )
-        .pipe( sass().on( 'error', sass.logError ) )
-        .pipe( gulp.dest( './public/css/' ) );
+	return gulp.src( './style.scss' )
+		.pipe( sass().on( 'error', sass.logError ) )
+		.pipe( gulp.dest( './public/css/' ) );
 } );
 
 // Run fractal's built-in build command
 gulp.task( 'build', shell.task( [
-    fractal + ' build'
+	fractal + ' build'
 ] ) );
 
 // Deploy site to GitHub pages
 gulp.task( 'gh-pages', function () {
-    return gulp.src( './build/**/*' )
-        .pipe( shell( [] ) )
-        .pipe( ghPages() );
+	return gulp.src( './build/**/*' )
+		.pipe( shell( [] ) )
+		.pipe( ghPages() );
 } );
 
 // Run fractal server
 gulp.task( 'watch', shell.task( [
-    fractal + ' start --sync --watch'
+	fractal + ' start --sync --watch'
 ] ) );
 
 //
 // Gulp sequential tasks
 //
-gulp.task( 'serve', [ 'sass', 'watch' ] );
-gulp.task( 'deploy', [ 'sass', 'build', 'gh-pages' ] );
+gulp.task( 'serve', gulp.series( 'sass', 'watch' ) );
+gulp.task( 'deploy', gulp.series( 'sass', 'build', 'gh-pages' ) );
