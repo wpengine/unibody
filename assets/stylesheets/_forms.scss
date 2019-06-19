@@ -153,3 +153,12 @@ input[type="radio"] {
     border-radius: 100%;
   }
 }
+
+@-moz-document url-prefix() {
+  input[type="checkbox"] {
+     visibility: visible;
+  }
+  input[type="radio"] {
+    visibility: visible;
+ }
+}
