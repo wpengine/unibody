@@ -1,5 +1,4 @@
-ul,
-ol {
+ul {
   list-style-type: none;
   margin-left: $spacer--0;
   margin-bottom: $spacer--2;
@@ -31,44 +30,6 @@ ul {
       transform: translateY(-50%);
       background: currentColor;
       opacity: 0.3;
-    }
-  }
-}
-
-ol {
-  counter-reset: li;
-
-  > li {
-    &::before {
-      content: counter(li) ')';
-      counter-increment: li;
-    }
-  }
-}
-
-ol.list-number-alpha {
-  margin-bottom: 0;
-  counter-reset: item;
-  li {
-    margin-left: 20px;
-    padding-left: 20px;
-    display: block;
-    position: relative;
-    &:before {
-      content: counters(item, ".", decimal) ".";
-      counter-increment: item;
-      position: absolute;
-      margin-right: 100%;
-      right: 20px;
-    }
-  }
-  ol {
-    counter-reset: subitem;
-    li {
-      &:before {
-        content: counter(subitem, lower-alpha) ".";
-        counter-increment: subitem;
-      }
     }
   }
 }
