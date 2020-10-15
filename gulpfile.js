@@ -1,5 +1,5 @@
 // Variables
-var fractal = "node_modules/@frctl/fractal/bin/fractal";
+var fractal = "node_modules/@frctl/fractal/bin/fractal.js";
 
 // Package variables
 var gulp = require( 'gulp' ); // core gulp
