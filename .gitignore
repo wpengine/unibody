@@ -9,7 +9,6 @@ config.codekit
 .sass-cache
 
 # Public assets
-public/css/style.css
 public/img/svg-icons
 
 # Other
