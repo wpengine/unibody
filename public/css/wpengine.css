@@ -93,18 +93,12 @@ code {
 /**
  * List styles
  */
-ul, ol {
+ul {
   list-style-type: none;
   margin-left: 0;
   padding-left: 1rem; }
-  ul > li::before, ol > li::before {
+  ul > li::before {
     padding-right: 5px; }
 
 ul > li::before {
   content: '\x025B8'; }
-
-ol {
-  counter-reset: li; }
-  ol > li::before {
-    content: counter(li) ")";
-    counter-increment: li; }
