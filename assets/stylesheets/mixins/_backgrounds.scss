@@ -11,7 +11,7 @@
 	@if index($convertable-units, unit($value)) and index($convertable-units, $unit) {
 		@return $value
 			/ nth($conversion-factors, index($convertable-units, unit($value)))
-            * nth($conversion-factors, index($convertable-units, $unit));
+			* nth($conversion-factors, index($convertable-units, $unit));
 	}
 
 	@warn "Cannot convert `#{unit($value)}` to `#{$unit}`.";
@@ -66,9 +66,11 @@
 // as well as a plain color fallback
 // and the `-webkit-` prefixed declaration
 //
+// stylelint-disable max-line-length
 // @example `@include linear-gradient(#31B7D7, #EDAC7D);`
 // @example `@include linear-gradient(to bottom, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);`
 // @example `@include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%);`
+// stylelint-enable max-line-length
 //
 // @access public
 // @param {String | List | Angle} $direction - Linear gradient direction

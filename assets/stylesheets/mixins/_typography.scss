@@ -109,7 +109,8 @@
 //
 // Builds the heading styles
 //
-// @param $level Any number between 1 and 6, essentially mapping to h1 through h6 tags.
+// @param $level Any number between 1 and 6,
+//               essentially mapping to h1 through h6 tags.
 //
 @mixin heading-styles($level: 1) {
 	font-family: $font--family-heading;

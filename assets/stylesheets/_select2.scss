@@ -9,7 +9,6 @@
 	width: 100%;
 	margin: 0;
 	position: relative;
-	vertical-align: middle;
 
 	@media screen and (min-width: $breakpoint--md) {
 		width: 50%;
@@ -41,7 +40,7 @@
 		position: relative;
 		cursor: pointer;
 		float: right;
-		font-weight: bold;
+		font-weight: 700;
 	}
 
 	.select2-selection__placeholder {
@@ -68,7 +67,6 @@
 		margin-top: 5px;
 		padding: 0;
 		background: transparent;
-		border: none;
 		outline: 0;
 		box-shadow: none;
 		-webkit-appearance: textfield;
@@ -160,15 +158,15 @@
 		cursor: pointer;
 	}
 
-	&[role=group] {
+	&[role="group"] {
 		padding: 0;
 	}
 
-	&[aria-disabled=true] {
+	&[aria-disabled="true"] {
 		color: $color--ash;
 	}
 
-	&[data-selected=true] {
+	&[data-selected="true"] {
 		background-color: $color--tiffany;
 		color: $color--white;
 	}
