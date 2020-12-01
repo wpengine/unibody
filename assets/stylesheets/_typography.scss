@@ -1,111 +1,111 @@
 body {
-  @include paragraph-style--base;
-  color: $font--color;
-  font-family: $font--family;
+	@include paragraph-style--base;
+	color: $font--color;
+	font-family: $font--family;
 }
 
 // Headings
 h1,
 .heading--size-1 {
-  @include heading-styles(1);
+	@include heading-styles(1);
 }
 
 h2,
 .heading--size-2 {
-  @include heading-styles(2);
+	@include heading-styles(2);
 }
 
 h3,
 .heading--size-3 {
-  @include heading-styles(3);
+	@include heading-styles(3);
 }
 
 h4,
 .heading--size-4 {
-  @include heading-styles(4);
+	@include heading-styles(4);
 }
 
 h5,
 .heading--size-5 {
-  @include heading-styles(5);
+	@include heading-styles(5);
 }
 
 h6,
 .heading--size-6 {
-  @include heading-styles(6);
+	@include heading-styles(6);
 }
 
 // Paragraph elements
 a {
-  color: $font--color-link;
-  text-decoration: underline;
+	color: $font--color-link;
+	text-decoration: underline;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: darken($font--color-link, 10%);
-    text-decoration: none;
-  }
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken($font--color-link, 10%);
+		text-decoration: none;
+	}
 }
 
 dfn,
 cite,
 em,
 i {
-  font-style: italic;
+	font-style: italic;
 }
 
 blockquote {
-  margin: 0 1.5em;
+	margin: 0 1.5em;
 }
 
 address {
-  margin: 0 0 1.5em;
+	margin: 0 0 1.5em;
 }
 
 pre {
-  margin-bottom: $spacer--2;
-  padding: $spacer--1;
-  background: $color--polar;
-  font-size: $font--size-small;
-  max-width: 100%;
-  overflow: auto;
+	margin-bottom: $spacer--2;
+	padding: $spacer--1;
+	background: $color--polar;
+	font-size: $font--size-small;
+	max-width: 100%;
+	overflow: auto;
 }
 
 code,
 kbd,
 tt,
 var {
-  font-family: $font--family-code;
-  font-size: $font--size-small;
-  background: $color--polar;
+	font-family: $font--family-code;
+	font-size: $font--size-small;
+	background: $color--polar;
 }
 
 abbr,
 acronym {
-  border-bottom: 1px dotted $color--ash;
-  cursor: help;
+	border-bottom: 1px dotted $color--ash;
+	cursor: help;
 }
 
 mark,
 ins {
-  background: $color--polar;
-  text-decoration: none;
+	background: $color--polar;
+	text-decoration: none;
 }
 
 big {
-  font-size: 125%;
+	font-size: 125%;
 }
 
 b,
 strong {
-  font-weight: $font--weight-bold;
+	font-weight: $font--weight-bold;
 }
 
 dt {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 dd {
-  margin: 0 $spacer--2 $spacer--2;
+	margin: 0 $spacer--2 $spacer--2;
 }

@@ -3,29 +3,29 @@ button,
 .button,
 [type="submit"],
 [type="button"] {
-  @extend %button;
+	@extend %button;
 }
 
 $buttons: (
-  'sunset-mirage' : $color--white  $color--white  $color--sunset  $color--mirage $color--sunset  $color--mirage,
-  'sunset-white'  : $color--white  $color--mirage $color--sunset  $color--white  $color--sunset  $color--white,
-  'tiffany-mirage': $color--white  $color--white  $color--tiffany $color--mirage $color--tiffany $color--mirage,
-  'tiffany-white' : $color--white  $color--mirage $color--tiffany $color--white  $color--tiffany $color--white,
-  'mirage-white'  : $color--white  $color--mirage $color--mirage  $color--white  $color--mirage  $color--white,
-  'white-mirage'  : $color--mirage $color--white $color--white   $color--mirage  $color--white  $color--mirage,
-  'white-sunset'  : $color--sunset $color--white $color--white   $color--sunset  $color--white  $color--sunset,
-  'hollow-mirage' : $color--mirage $color--white  $color--none    $color--mirage $color--mirage  $color--mirage,
-  'hollow-white'  : $color--white  $color--mirage $color--none    $color--white  $color--white   $color--white,
-  );
+	"sunset-mirage" : $color--white  $color--white  $color--sunset  $color--mirage $color--sunset  $color--mirage,
+	"sunset-white"  : $color--white  $color--mirage $color--sunset  $color--white  $color--sunset  $color--white,
+	"tiffany-mirage": $color--white  $color--white  $color--tiffany $color--mirage $color--tiffany $color--mirage,
+	"tiffany-white" : $color--white  $color--mirage $color--tiffany $color--white  $color--tiffany $color--white,
+	"mirage-white"  : $color--white  $color--mirage $color--mirage  $color--white  $color--mirage  $color--white,
+	"white-mirage"  : $color--mirage $color--white $color--white   $color--mirage  $color--white  $color--mirage,
+	"white-sunset"  : $color--sunset $color--white $color--white   $color--sunset  $color--white  $color--sunset,
+	"hollow-mirage" : $color--mirage $color--white  $color--none    $color--mirage $color--mirage  $color--mirage,
+	"hollow-white"  : $color--white  $color--mirage $color--none    $color--white  $color--white   $color--white,
+);
 
 @each $label, $colors in $buttons {
-  .button--#{$label} {
-    @include button( $colors... );
-  }
+	.button--#{$label} {
+		@include button( $colors... );
+	}
 }
 
 .button--small {
-  padding: #{0.25 * $spacer};
+	padding: #{0.25 * $spacer};
 }
 
 // Define our button group styles
@@ -33,20 +33,20 @@ $buttons: (
 	> %button {
 		min-width: 200px;
 
-    @media (max-width: $breakpoint--md - 1) {
-      width: 100%;
+		@media (max-width: $breakpoint--md - 1) {
+			width: 100%;
 
-      &:not(:first-child) {
-        margin-top: $spacer--2;
-      }
-    }
+			&:not(:first-child) {
+				margin-top: $spacer--2;
+			}
+		}
 
-    @media (min-width: $breakpoint--md) {
-      width: auto;
+		@media (min-width: $breakpoint--md) {
+			width: auto;
 
-      &:not(:first-child) {
-        margin-left: $spacer--2;
-      }
-    }
+			&:not(:first-child) {
+				margin-left: $spacer--2;
+			}
+		}
 	}
 }
