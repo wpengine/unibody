@@ -1,104 +1,104 @@
 // Color Palette
-$color--tiffany:     #0ECAD4 !default;
+$color--tiffany:     #0ecad4 !default;
 $color--mirage:      #002838 !default;
-$color--sunset:      #FF6C29 !default;
+$color--sunset:      #ff6c29 !default;
 
-$color--cherry:      #D21B46 !default;
-$color--curry:       #FFCB52 !default;
-$color--seafoam:     #50E3C2 !default;
-$color--dollabillz:  #43AB3C !default;
-$color--lapis:       #007EEA !default;
-$color--royal:       #7E5CEF !default;
-$color--heliotrope:  #7A1BA6 !default;
+$color--cherry:      #d21b46 !default;
+$color--curry:       #ffcb52 !default;
+$color--seafoam:     #50e3c2 !default;
+$color--dollabillz:  #43ab3c !default;
+$color--lapis:       #007eea !default;
+$color--royal:       #7e5cef !default;
+$color--heliotrope:  #7a1ba6 !default;
 $color--helix:       #180038 !default;
 
-$color--white:       #FFFFFF !default;
-$color--polar:       #F4F7FA !default;
-$color--polar-5:     #E1E9F1 !default;
-$color--polar-10:    #CFDDE9 !default;
-$color--polar-15:    #BDD0E0 !default;
-$color--polar-20:    #AEC4D9 !default;
-$color--polar-25:    #9DB7D1 !default;
-$color--polar-30:    #8CABC8 !default;
-$color--polar-35:    #7A9EC0 !default;
-$color--polar-40:    #6A92B8 !default;
-$color--ash:         #98A2A7 !default;
-$color--soot:        #6B757B !default;
-$color--black:       #000000 !default;
+$color--white:       #fff !default;
+$color--polar:       #f4f7fa !default;
+$color--polar-5:     #e1e9f1 !default;
+$color--polar-10:    #cfdde9 !default;
+$color--polar-15:    #bdd0e0 !default;
+$color--polar-20:    #aec4d9 !default;
+$color--polar-25:    #9db7d1 !default;
+$color--polar-30:    #8cabc8 !default;
+$color--polar-35:    #7a9ec0 !default;
+$color--polar-40:    #6a92b8 !default;
+$color--ash:         #98a2a7 !default;
+$color--soot:        #6b757b !default;
+$color--black:       #000 !default;
 
 $color--none:        transparent !default;
 
 $colors--primary:
-  $color--tiffany
-  $color--mirage
-  $color--sunset;
+	$color--tiffany
+	$color--mirage
+	$color--sunset;
 
 $colors--secondary:
-  $color--cherry
-  $color--curry
-  $color--seafoam
-  $color--dollabillz
-  $color--lapis
-  $color--royal;
+	$color--cherry
+	$color--curry
+	$color--seafoam
+	$color--dollabillz
+	$color--lapis
+	$color--royal;
 
 $colors--grayscale:
-  $color--white
-  $color--polar
-  $color--ash
-  $color--soot
-  $color--black;
+	$color--white
+	$color--polar
+	$color--ash
+	$color--soot
+	$color--black;
 
 $colors: $colors--primary $colors--secondary $colors--grayscale;
 
 $colors-map--primary: (
-  'tiffany':       $color--tiffany,
-  'mirage':        $color--mirage,
-  'sunset':        $color--sunset,
+	"tiffany":       $color--tiffany,
+	"mirage":        $color--mirage,
+	"sunset":        $color--sunset,
 );
 
 $colors-map--secondary: (
-  'cherry':        $color--cherry,
-  'curry':         $color--curry,
-  'seafoam':       $color--seafoam,
-  'dollabillz':    $color--dollabillz,
-  'lapis':         $color--lapis,
-  'royal':         $color--royal
+	"cherry":        $color--cherry,
+	"curry":         $color--curry,
+	"seafoam":       $color--seafoam,
+	"dollabillz":    $color--dollabillz,
+	"lapis":         $color--lapis,
+	"royal":         $color--royal
 );
 
 $colors-map--grayscale: (
-  'white':        $color--white,
-  'polar':        $color--polar,
-  'ash':          $color--ash,
-  'soot':         $color--soot,
-  'black':        $color--black
+	"white":        $color--white,
+	"polar":        $color--polar,
+	"ash":          $color--ash,
+	"soot":         $color--soot,
+	"black":        $color--black
 );
 
-$colors-map: map_merge( map_merge( $colors-map--primary, $colors-map--secondary ), $colors-map--grayscale );
+$colors-map: map_merge(map_merge($colors-map--primary, $colors-map--secondary), $colors-map--grayscale);
 
 // Font settings
-$font--family:            'Open Sans', Arial, sans-serif;
+$font--family:            "Open Sans", arial, sans-serif;
 $font--family-heading:    $font--family;
-$font--family-code:       "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+$font--family-code:       "Courier New", courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
-$font--size-body:          16px     !default;
+$font--size-body:          16px !default;
 
 $font--size-small:         0.875rem !default; // 14px
-$font--size:               1rem     !default; // 16px
+$font--size:               1rem !default; // 16px
 $font--size-bump:          1.125rem !default; // 18px
-$font--size-medium:        1.25rem  !default; // 20px
+$font--size-medium:        1.25rem !default; // 20px
 $font--size-largeish:      1.375rem !default; // 22px
-$font--size-large:         1.5rem   !default; // 24px
+$font--size-large:         1.5rem !default; // 24px
 
-$font--size-h1:            3.5rem   !default; // 56px
-$font--size-h2:            2.75rem  !default; // 44px
-$font--size-h3:            2rem     !default; // 32px
-$font--size-h4:            1.75rem  !default; // 28px
-$font--size-h5:            1.5rem   !default; // 24px
+$font--size-h1:            3.5rem !default; // 56px
+$font--size-h2:            2.75rem !default; // 44px
+$font--size-h3:            2rem !default; // 32px
+$font--size-h4:            1.75rem !default; // 28px
+$font--size-h5:            1.5rem !default; // 24px
 $font--size-h6:            1.125rem !default; // 18px
 
-$font--size-hero-1:        2.75rem  !default; // 44px
-$font--size-hero-2:        3.5rem   !default; // 56px
-$font--size-hero-3:        4.5rem   !default; // 72px
+$font--size-hero-1:        2.75rem !default; // 44px
+$font--size-hero-2:        3.5rem !default; // 56px
+$font--size-hero-3:        4.5rem !default; // 72px
 
 $font--weight:             400 !default;
 $font--weight-light:       300 !default;
@@ -111,12 +111,12 @@ $font--line-height-h1:     1.3571 !default; // 76px / 56px
 $font--line-height-h2:     1.3634 !default; // 60px / 44px
 $font--line-height-h3:     1.3438 !default; // 43px / 32px
 $font--line-height-h4:     1.3571 !default; // 38px / 28px
-$font--line-height-h5:     1.375  !default; // 33px / 24px
+$font--line-height-h5:     1.375 !default; // 33px / 24px
 $font--line-height-h6:     1.3333 !default; // 24px / 18px
-$font--line-height-list:   1.875  !default; // 30px / 16px
+$font--line-height-list:   1.875 !default; // 30px / 16px
 
 $font--line-height-hero-1: 1.1111 !default; // 80px / 72px
-$font--line-height-hero-2: 1      !default; // 56px / 56px
+$font--line-height-hero-2: 1 !default; // 56px / 56px
 $font--line-height-hero-3: 1.0909 !default; // 48px / 44px
 
 $font--color:             $color--mirage;

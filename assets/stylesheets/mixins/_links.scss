@@ -1,15 +1,17 @@
 %link--underline {
-  text-decoration: underline;
+	text-decoration: underline;
 
-  &:hover, &:focus {
-    text-decoration: none;
-  }
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
 }
 
 %link--no-underline {
-  text-decoration: none;
+	text-decoration: none;
 
-  &:hover, &:focus {
-    text-decoration: underline;
-  }
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
 }

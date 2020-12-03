@@ -1,74 +1,74 @@
 ul,
 ol {
-  list-style-type: none;
-  margin-left: $spacer--0;
-  margin-bottom: $spacer--2;
-  padding-left: 1rem;
-  font-size: $font--size-body;
-  line-height: $font--line-height-list;
+	list-style-type: none;
+	margin-left: $spacer--0;
+	margin-bottom: $spacer--2;
+	padding-left: 1rem;
+	font-size: $font--size-body;
+	line-height: $font--line-height-list;
 
-  > li {
-    position: relative;
-    margin-bottom: 0;
+	> li {
+		position: relative;
+		margin-bottom: 0;
 
-    &::before {
-      position: absolute;
-      display: block;
-      top: 0em;
-      left: -1em;
-      content: '';
-      margin-right: $spacer--1;
-    }
-  }
+		&::before {
+			position: absolute;
+			display: block;
+			top: 0;
+			left: -1em;
+			content: "";
+			margin-right: $spacer--1;
+		}
+	}
 }
 
 ul {
-  > li {
-    &::before {
-      width: 6px;
-      height: 6px;
-      top: 0.75em;
-      transform: translateY(-50%);
-      background: currentColor;
-      opacity: 0.3;
-    }
-  }
+	> li {
+		&::before {
+			width: 6px;
+			height: 6px;
+			top: 0.75em;
+			transform: translateY(-50%);
+			background: currentColor;
+			opacity: 0.3;
+		}
+	}
 }
 
 ol {
-  counter-reset: li;
+	counter-reset: li;
 
-  > li {
-    &::before {
-      content: counter(li) ')';
-      counter-increment: li;
-    }
-  }
+	> li {
+		&::before {
+			content: counter(li) ")";
+			counter-increment: li;
+		}
+	}
 }
 
 ol.list-number-alpha {
-  margin-bottom: 0;
-  counter-reset: item;
-  li {
-    margin-left: 20px;
-    padding-left: 20px;
-    display: block;
-    position: relative;
-    &:before {
-      content: counters(item, ".", decimal) ".";
-      counter-increment: item;
-      position: absolute;
-      margin-right: 100%;
-      right: 20px;
-    }
-  }
-  ol {
-    counter-reset: subitem;
-    li {
-      &:before {
-        content: counter(subitem, lower-alpha) ".";
-        counter-increment: subitem;
-      }
-    }
-  }
+	margin-bottom: 0;
+	counter-reset: item;
+	li {
+		margin-left: 20px;
+		padding-left: 20px;
+		display: block;
+		position: relative;
+		&::before {
+			content: counters(item, ".", decimal) ".";
+			counter-increment: item;
+			position: absolute;
+			margin-right: 100%;
+			right: 20px;
+		}
+	}
+	ol {
+		counter-reset: subitem;
+		li {
+			&::before {
+				content: counter(subitem, lower-alpha) ".";
+				counter-increment: subitem;
+			}
+		}
+	}
 }

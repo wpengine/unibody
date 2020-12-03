@@ -1,8 +1,8 @@
 {
     "name": "unibody",
     "version": "1.5.8",
-    "description": "The core styles, images, and javascript for the WP Engine brand",
-    "main": "assets/javascripts/wpengine.js",
+    "description": "The core styles for the WP Engine brand",
+    "main": "assets/javascript/",
     "style": "style.scss",
     "sass": "style.scss",
     "files": [
@@ -16,6 +16,7 @@
         "css"
     ],
     "contributors": [
+        "Jason Cross",
         "Ryan Hoover"
     ],
     "license": "UNLICENSED",
@@ -24,9 +25,13 @@
         "gulp": "^4.0.2",
         "gulp-gh-pages": "^0.5.4",
         "gulp-sass": "^4.1.0",
-        "gulp-shell": "^0.8.0"
+        "gulp-shell": "^0.8.0",
+        "stylelint": "^13.8.0",
+        "stylelint-config-wordpress": "^17.0.0"
     },
     "scripts": {
+        "lint": "stylelint **/*.scss",
+        "clean": "stylelint **/*.scss --fix",
         "build": "gulp build",
         "serve": "gulp serve",
         "deploy": "gulp deploy"
