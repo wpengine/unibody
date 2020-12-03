@@ -1,5 +1,5 @@
 // Variables
-var fractal = "node_modules/@frctl/fractal/bin/fractal";
+var fractal = 'node_modules/.bin/fractal';
 
 // Package variables
 var gulp = require( 'gulp' ); // core gulp
@@ -19,9 +19,15 @@ gulp.task( 'sass', function () {
 } );
 
 // Run fractal's built-in build command
-gulp.task( 'build', shell.task( [
-	fractal + ' build'
-] ) );
+gulp.task(
+	'build',
+	gulp.parallel(
+		'sass',
+		shell.task( [
+			fractal + ' build'
+		] )
+	)
+);
 
 // Deploy site to GitHub pages
 gulp.task( 'gh-pages', function () {
