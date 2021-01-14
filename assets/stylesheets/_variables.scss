@@ -76,7 +76,7 @@ $colors-map--grayscale: (
 $colors-map: map_merge(map_merge($colors-map--primary, $colors-map--secondary), $colors-map--grayscale);
 
 // Font settings
-$font--family:            "Open Sans", arial, sans-serif;
+$font--family:            "Open Sans", Tahoma, sans-serif;
 $font--family-heading:    $font--family;
 $font--family-code:       "Courier New", courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
