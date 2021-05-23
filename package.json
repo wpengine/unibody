@@ -1,7 +1,7 @@
 {
     "name": "@dxt/unibody",
     "version": "2.0.0",
-    "description": "The core styles for the WP Engine brand",
+    "description": "Core styles for the WP Engine brand",
     "main": "assets/javascript/",
     "style": "style.scss",
     "sass": "style.scss",
