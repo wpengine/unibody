@@ -1,0 +1,35 @@
+version: 2.1
+
+orbs:
+    wpengine: ryanshoover/wpengine@0.7
+
+workflows:
+    deploy:
+        jobs:
+            - wpengine/build:
+                context: DXT
+                filters:
+                    tags:
+                        only: /^\d+\.\d+\.\d+$/
+                    branches:
+                        only: /.*/
+
+            - wpengine/lint:
+                context: DXT
+                requires:
+                    - wpengine/build
+                filters:
+                    tags:
+                        only: /^\d+\.\d+\.\d+$/
+                    branches:
+                        only: /.*/
+
+            - wpengine/deploy_fury:
+                  context: DXT
+                  requires:
+                      - wpengine/lint
+                  filters:
+                      tags:
+                          only: /^\d+\.\d+\.\d+$/
+                      branches:
+                          only: /.*/
