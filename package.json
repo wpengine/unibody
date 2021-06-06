@@ -6,7 +6,10 @@
     "style": "style.scss",
     "sass": "style.scss",
     "files": [
-        "assets"
+        "assets",
+        "abstract.scss",
+        "legacy.scss",
+        "style.scss"
     ],
     "repository": {
         "type": "git"
