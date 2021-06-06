@@ -3,6 +3,22 @@ version: 2.1
 orbs:
     wpengine: ryanshoover/wpengine@0.7
 
+jobs:
+    deploy:
+        docker:
+            - image: circleci/node:buster
+        steps:
+            - checkout
+            - run:
+                  name: Add authentication to Gemfury
+                  command: npm config set //npm.fury.io/wpedxt/:_authToken $GEMFURY_TOKEN_PUSH
+            - run:
+                  name: Add Gemfury registry
+                  command: npm config set @dxt:registry https://npm.fury.io/wpedxt/
+            - deploy:
+                  name: Deploy to GemFury
+                  command: npm publish
+
 workflows:
     deploy:
         jobs:
@@ -24,12 +40,10 @@ workflows:
                     branches:
                         only: /.*/
 
-            - wpengine/deploy_fury:
+            - deploy:
                   context: DXT
                   requires:
                       - wpengine/lint
                   filters:
                       tags:
                           only: /^\d+\.\d+\.\d+$/
-                      branches:
-                          only: /.*/
