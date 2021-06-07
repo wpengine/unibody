@@ -8,7 +8,7 @@
 // @return {Number} Converted angle
 @function convert-angle($value, $unit) {
 	$convertable-units: deg grad turn rad;
-	$conversion-factors: 1 math.div( 10grad, 9deg ) math.div( 1turn, 360deg ) math.div( 3.1415926rad, 180deg );
+	$conversion-factors: 1 math.div(10grad, 9deg) math.div(1turn, 360deg) math.div(3.1415926rad, 180deg);
 
 	@if index($convertable-units, unit($value)) and index($convertable-units, $unit) {
 		@return math.div(
