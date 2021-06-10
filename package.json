@@ -24,19 +24,13 @@
     ],
     "license": "UNLICENSED",
     "devDependencies": {
-        "@frctl/fractal": "^1.5.1",
-        "gulp": "^4.0.2",
-        "gulp-gh-pages": "^0.5.4",
-        "gulp-sass": "^4.1.0",
-        "gulp-shell": "^0.8.0",
-        "stylelint": "^13.8.0",
-        "stylelint-config-wordpress": "^17.0.0"
+        "@wordpress/stylelint-config": "^19.0.5",
+        "sass": "^1.34.1",
+        "stylelint": "^13.8.0"
     },
     "scripts": {
         "lint": "stylelint **/*.scss",
         "clean": "stylelint **/*.scss --fix",
-        "build": "gulp build",
-        "serve": "gulp serve",
-        "deploy": "gulp deploy"
+        "build": "sass style.scss build/style.css"
     }
 }
